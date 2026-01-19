@@ -46,3 +46,32 @@ display: grid;
   width: 120px;
   cursor: pointer;
 }
+#pitchScreen {
+  position: relative; /* allows absolute positioning inside */
+}
+
+#restartBtn {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4CAF50; /* green */
+  color: white;
+  cursor: pointer;
+
+  position: absolute;  /* float at top-right */
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#restartBtn:hover {
+  background-color: #45a049; /* darker on hover */
+}
+
