@@ -20,26 +20,27 @@ const formationPositionsData = {
     { pos: "GK", row: 3, col: 2 } // centered under CBs
   ],
 
-  "4-4-2": [
-    // Strikers
-    { pos: "ST", row: 0, col: 1 },
-    { pos: "ST", row: 0, col: 2 },
+"4-4-2": [
+  // Strikers
+  { pos: "ST", row: 0, col: 1 },
+  { pos: "ST", row: 0, col: 3 },  // spread out
 
-    // Midfielders
-    { pos: "LM", row: 1, col: 0 },
-    { pos: "CM", row: 1, col: 1 },
-    { pos: "CM", row: 1, col: 2 },
-    { pos: "RM", row: 1, col: 3 },
+  // Midfielders
+  { pos: "LM", row: 1, col: 0 },
+  { pos: "CM", row: 1, col: 1 },
+  { pos: "CM", row: 1, col: 3 },
+  { pos: "RM", row: 1, col: 4 },
 
-    // Defenders
-    { pos: "LB", row: 2, col: 0 },
-    { pos: "CB", row: 2, col: 1 },
-    { pos: "CB", row: 2, col: 2 },
-    { pos: "RB", row: 2, col: 3 },
+  // Defenders
+  { pos: "LB", row: 2, col: 0 },
+  { pos: "CB", row: 2, col: 1 },
+  { pos: "CB", row: 2, col: 3 },  // spread out
+  { pos: "RB", row: 2, col: 4 },
 
-    // Goalkeeper (centered)
-    { pos: "GK", row: 3, col: 1 } // will visually span between the CBs
-  ]
+  // Goalkeeper
+  { pos: "GK", row: 3, col: 0 } // column will be set dynamically
+]
+
 };
 
 let players = [];
@@ -75,22 +76,25 @@ function renderPitch() {
 
   div.style.gridRowStart = p.row + 1;
 
-  if (p.pos === "GK") {
-    // Find CBs in the same formation row
+if (p.pos === "GK") {
+    // Find CBs in row 2
     const cbCols = formationPositions
-      .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
-      .map(pos => pos.col);
+        .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
+        .map(pos => pos.col);
 
-    // Calculate center column
-    const centerCol = Math.round((cbCols[0] + cbCols[1]) / 2) + 1;
+    const minCol = Math.min(cbCols[0], cbCols[1]);
+    const maxCol = Math.max(cbCols[0], cbCols[1]);
+
+    const centerCol = Math.floor((minCol + maxCol) / 2) + 1;
 
     div.style.gridColumnStart = centerCol;
-    div.style.gridColumnEnd = centerCol + 1; // span 1 column
+    div.style.gridColumnEnd = centerCol + 1;
     div.style.textAlign = "center";
-  } else {
+} else {
     div.style.gridColumnStart = p.col + 1;
     div.style.gridColumnEnd = "auto";
-  }
+}
+
 
   div.onclick = () => openPicker(p.pos, index);
   pitch.appendChild(div);
