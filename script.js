@@ -13,25 +13,26 @@ const formationPositionsData = {
     { pos: "GK", row: 3, col: 2 }
   ],
 "4-4-2": [
-  // Strikers (closer together)
+  // Strikers
   { pos: "ST", row: 0, col: 1 },
   { pos: "ST", row: 0, col: 2 },
 
-  // Midfielders (closer together)
+  // Midfielders
   { pos: "LM", row: 1, col: 0 },
   { pos: "CM", row: 1, col: 1 },
   { pos: "CM", row: 1, col: 2 },
   { pos: "RM", row: 1, col: 3 },
 
-  // Defenders (closer together)
+  // Defenders
   { pos: "LB", row: 2, col: 0 },
   { pos: "CB", row: 2, col: 1 },
   { pos: "CB", row: 2, col: 2 },
   { pos: "RB", row: 2, col: 3 },
 
-  // Goalkeeper (visually centered)
-  { pos: "GK", row: 3, col: 1 } // GK visually between the two CBs
+  // Goalkeeper (centered)
+  { pos: "GK", row: 3, col: 1.5 } // we’ll fix this in renderPitch()
 ]
+
 
 
 
@@ -74,12 +75,15 @@ formationPositions.forEach((p, index) => {
   div.className = "position";
   div.innerText = squad[index] ? squad[index].name : p.pos;
 
-  // place the position in the correct row
   div.style.gridRowStart = p.row + 1;
 
-  // special rule: center the goalkeeper visually
   if (p.pos === "GK") {
-    div.style.gridColumnStart = 1.5; // visually centered under CBs
+    // GK column = average of the two CB columns
+    const cbCols = formationPositions
+      .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
+      .map(pos => pos.col);
+    const centerCol = Math.floor((cbCols[0] + cbCols[1]) / 2) + 1;
+    div.style.gridColumnStart = centerCol;
   } else {
     div.style.gridColumnStart = p.col + 1;
   }
@@ -87,6 +91,7 @@ formationPositions.forEach((p, index) => {
   div.onclick = () => openPicker(p.pos, index);
   pitch.appendChild(div);
 });
+
 
 }
 
