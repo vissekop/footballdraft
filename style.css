@@ -75,3 +75,11 @@ display: grid;
   background-color: #45a049; /* darker on hover */
 }
 
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 15px;
+  max-width: 300px;
+  margin: auto;
+}
+
