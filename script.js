@@ -106,10 +106,11 @@ function openPicker(position, index) {
   currentPosition = index;
   document.getElementById("pickerScreen").classList.remove("hidden");
 
-  const eligible = players.filter(p => 
-    p.positions.includes(position) && 
-    !Object.values(squad).includes(p)
+  const eligible = players.filter(p =>
+    p.positions.includes(position) &&
+    !Object.values(squad).some(player => player && player.name === p.name)
 );
+
 
   const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
 
