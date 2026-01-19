@@ -1,9 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>FIFA Draft</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>FIFA Draft Game</h1>
+
+<h1>FIFA Draft Mode</h1>
+
+<div id="formationScreen">
+  <h2>Select Formation</h2>
+  <button onclick="startDraft('4-3-3')">4-3-3</button>
+  <button onclick="startDraft('4-4-2')">4-4-2</button>
+</div>
+
+<div id="pitchScreen" class="hidden">
+  <h2>Pick your players</h2>
+  <div id="pitch"></div>
+</div>
+
+<div id="pickerScreen" class="hidden">
+  <h2>Choose a player</h2>
+  <div id="options"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
