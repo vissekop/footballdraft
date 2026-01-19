@@ -30,6 +30,13 @@
   { "name": "Rudiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"] },
   { "name": "Araújo", "club": "Barcelona", "rating": 87, "positions": ["CB"] },
   { "name": "Saliba", "club": "Arsenal", "rating": 86, "positions": ["CB"] },
+  
+  { "name": "Raphinha", "club": "Barcelona", "rating": 89, "positions": ["LM", "LW", "CAM"] },
+  { "name": "Kvaratskhelia", "club": "PSG", "rating": 87, "positions": ["LW", "LM"] },
+  { "name": "Luis Díaz", "club": "Bayern", "rating": 87, "positions": ["LM", "LW"] },
+  { "name": "Doku", "club": "Man City", "rating": 86, "positions": ["LW", "RW", "LM"] },
+  { "name": "Semenyo", "club": "Man City", "rating": 84, "positions": ["LW", "LM", "RM"] },
+  { "name": "Barcola", "club": "PSG", "rating": 86, "positions": ["LM", "RB","LB"] },
 
   { "name": "João Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
   { "name": "Alexander-Arnold", "club": "Real Madrid", "rating": 87, "positions": ["RB", "RM"] },
