@@ -6,6 +6,35 @@
   { "name": "Courtois", "club": "Real Madrid", "rating": 90, "positions": ["GK"] },
   { "name": "Van Dijk", "club": "Liverpool", "rating": 89, "positions": ["CB"] },
   { "name": "Hakimi", "club": "PSG", "rating": 86, "positions": ["RB"] },
-  { "name": "Theo Hernandez", "club": "Al Hilal", "rating": 86, "positions": ["LB"] }
-]
+  { "name": "Theo Hernandez", "club": "Al Hilal", "rating": 86, "positions": ["LB"] },
 
+  { "name": "Ronaldo", "club": "Al Nassr", "rating": 88, "positions": ["ST"] },
+  { "name": "Neymar", "club": "Al Hilal", "rating": 89, "positions": ["LW"] },
+  { "name": "Bellingham", "club": "Real Madrid", "rating": 90, "positions": ["CM"] },
+  { "name": "Pedri", "club": "Barcelona", "rating": 88, "positions": ["CM"] },
+  { "name": "Modric", "club": "Real Madrid", "rating": 88, "positions": ["CM"] },
+  { "name": "Valverde", "club": "Real Madrid", "rating": 88, "positions": ["CM", "RM"] },
+
+  { "name": "Vinicius Jr", "club": "Real Madrid", "rating": 89, "positions": ["LW"] },
+  { "name": "Salah", "club": "Liverpool", "rating": 89, "positions": ["RW"] },
+  { "name": "Son", "club": "Tottenham", "rating": 88, "positions": ["LW", "ST"] },
+  { "name": "Leao", "club": "AC Milan", "rating": 87, "positions": ["LW"] },
+
+  { "name": "Kane", "club": "Bayern", "rating": 90, "positions": ["ST"] },
+  { "name": "Osimhen", "club": "Napoli", "rating": 88, "positions": ["ST"] },
+
+  { "name": "Rodri", "club": "Man City", "rating": 89, "positions": ["CM", "CDM"] },
+  { "name": "Kimmich", "club": "Bayern", "rating": 88, "positions": ["CM", "RB"] },
+
+  { "name": "Marquinhos", "club": "PSG", "rating": 88, "positions": ["CB"] },
+  { "name": "Rudiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"] },
+  { "name": "Araujo", "club": "Barcelona", "rating": 87, "positions": ["CB"] },
+  { "name": "Saliba", "club": "Arsenal", "rating": 86, "positions": ["CB"] },
+
+  { "name": "Joao Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
+  { "name": "Alexander-Arnold", "club": "Liverpool", "rating": 87, "positions": ["RB"] },
+
+  { "name": "Ter Stegen", "club": "Barcelona", "rating": 89, "positions": ["GK"] },
+  { "name": "Ederson", "club": "Man City", "rating": 89, "positions": ["GK"] },
+  { "name": "Alisson", "club": "Liverpool", "rating": 89, "positions": ["GK"] }
+]
