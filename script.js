@@ -15,23 +15,24 @@ const formationPositionsData = {
 "4-4-2": [
   // Strikers
   { pos: "ST", row: 0, col: 1 },
-  { pos: "ST", row: 0, col: 2 },
+  { pos: "ST", row: 0, col: 3 },
 
   // Midfielders
   { pos: "LM", row: 1, col: 0 },
   { pos: "CM", row: 1, col: 1 },
-  { pos: "CM", row: 1, col: 2 },
-  { pos: "RM", row: 1, col: 3 },
+  { pos: "CM", row: 1, col: 3 },
+  { pos: "RM", row: 1, col: 4 },
 
   // Defenders
   { pos: "LB", row: 2, col: 0 },
   { pos: "CB", row: 2, col: 1 },
-  { pos: "CB", row: 2, col: 2 },
-  { pos: "RB", row: 2, col: 3 },
+  { pos: "CB", row: 2, col: 3 },
+  { pos: "RB", row: 2, col: 4 },
 
-  // Goalkeeper (centered)
-  { pos: "GK", row: 3, col: 1.5 } // we’ll fix this in renderPitch()
+  // Goalkeeper (centered between CBs)
+  { pos: "GK", row: 3, col: 1 } // will span columns 1–3
 ]
+
 
 
 
@@ -78,10 +79,10 @@ formationPositions.forEach((p, index) => {
   div.style.gridRowStart = p.row + 1;
 
   if (p.pos === "GK") {
-    // make the GK span two columns to appear centered
-    div.style.gridColumnStart = 1;
-    div.style.gridColumnEnd = 3; // spans 2 columns
-    div.style.textAlign = "center"; // optional for centering text
+    // GK spans columns 2–3 (between the CBs)
+    div.style.gridColumnStart = 2;
+    div.style.gridColumnEnd = 3;
+    div.style.textAlign = "center"; // center text inside
   } else {
     div.style.gridColumnStart = p.col + 1;
     div.style.gridColumnEnd = "auto";
@@ -90,6 +91,7 @@ formationPositions.forEach((p, index) => {
   div.onclick = () => openPicker(p.pos, index);
   pitch.appendChild(div);
 });
+
 
 
 }
