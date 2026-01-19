@@ -50,6 +50,7 @@ function startDraft(formation) {
 
 
 
+
 function renderPitch() {
   const pitch = document.getElementById("pitch");
   pitch.innerHTML = "";
