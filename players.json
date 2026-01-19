@@ -20,6 +20,11 @@
   { "name": "Son", "club": "LAFC", "rating": 88, "positions": ["LW", "ST"] },
   { "name": "Leão", "club": "AC Milan", "rating": 87, "positions": ["LW", "LM"] },
 
+  { "name": "Cherki", "club": "Man City", "rating": 86, "positions": ["CAM", "RW", "CM", "RM"] },
+  { "name": "Gabriel", "club": "Arsenal", "rating": 88, "positions": ["CB"] },
+  { "name": "Koundé", "club": "Barcelona", "rating": 87, "positions": ["RB", "CB"] },
+  { "name": "Joan García", "club": "Barcelona", "rating": 85, "positions": ["GK"] },
+  
   { "name": "Kane", "club": "Bayern", "rating": 90, "positions": ["ST"] },
   { "name": "Osimhen", "club": "Galatasaray", "rating": 88, "positions": ["ST"] },
 
@@ -40,6 +45,23 @@
 
   { "name": "João Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
   { "name": "Alexander-Arnold", "club": "Real Madrid", "rating": 87, "positions": ["RB", "RM"] },
+  { "name": "Lewandowski", "club": "Barcelona", "rating": 88, "positions": ["ST"] },
+  { "name": "Rodrygo", "club": "Real Madrid", "rating": 86, "positions": ["RW", "ST"] },
+  { "name": "Marmoush", "club": "Man City", "rating": 85, "positions": ["ST", "LW", "CAM"] },
+  { "name": "Gvardiol", "club": "Man City", "rating": 86, "positions": ["LB", "CB", "LM"] },
+  { "name": "Rúben Dias", "club": "Man City", "rating": 88, "positions": ["CB"] },
+  { "name": "Donnarumma", "club": "Man City", "rating": 89, "positions": ["GK"] },
+  { "name": "Lammens", "club": "Man United", "rating": 82, "positions": ["GK"] },
+  { "name": "Oblak", "club": "Atletico Madrid", "rating": 88, "positions": ["GK"] },
+  { "name": "Julián Álvarez", "club": "Atletico Madrid", "rating": 87, "positions": ["ST"] },
+  { "name": "Griezmann", "club": "Atletico Madrid", "rating": 87, "positions": ["ST", "LW"] },
+  { "name": "Pacho", "club": "PSG", "rating": 86, "positions": ["CB"] },
+  { "name": "Nuno Mendes", "club": "PSG", "rating": 87, "positions": ["LB", "LM"] },
+  { "name": "Dembélé", "club": "PSG", "rating": 90, "positions": ["ST", "RW"] },
+  { "name": "Doué", "club": "PSG", "rating": 86, "positions": ["RW", "RM"] },
+  { "name": "Vitinha", "club": "PSG", "rating": 89, "positions": ["CM", "CAM", "CDM"] },
+  { "name": "João Neves", "club": "PSG", "rating": 87, "positions": ["CM", "CAM"] },
+
 
   { "name": "Ter Stegen", "club": "Barcelona", "rating": 89, "positions": ["GK"] },
   { "name": "Ederson", "club": "Fenerbahçe", "rating": 89, "positions": ["GK"] },
