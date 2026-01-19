@@ -12,13 +12,13 @@
   { "name": "Neymar", "club": "Santos", "rating": 89, "positions": ["LW"] },
   { "name": "Bellingham", "club": "Real Madrid", "rating": 90, "positions": ["CM"] },
   { "name": "Pedri", "club": "Barcelona", "rating": 88, "positions": ["CM"] },
-  { "name": "Modric", "club": "AC Milan", "rating": 88, "positions": ["CM"] },
+  { "name": "Modrić", "club": "AC Milan", "rating": 88, "positions": ["CM"] },
   { "name": "Valverde", "club": "Real Madrid", "rating": 88, "positions": ["CM", "RM","RB"] },
 
   { "name": "Vinicius Jr", "club": "Real Madrid", "rating": 89, "positions": ["LW", "ST"] },
   { "name": "Salah", "club": "Liverpool", "rating": 89, "positions": ["RW"] },
   { "name": "Son", "club": "LAFC", "rating": 88, "positions": ["LW", "ST"] },
-  { "name": "Leao", "club": "AC Milan", "rating": 87, "positions": ["LW"] },
+  { "name": "Leão", "club": "AC Milan", "rating": 87, "positions": ["LW"] },
 
   { "name": "Kane", "club": "Bayern", "rating": 90, "positions": ["ST"] },
   { "name": "Osimhen", "club": "Galatasaray", "rating": 88, "positions": ["ST"] },
@@ -28,10 +28,10 @@
 
   { "name": "Marquinhos", "club": "PSG", "rating": 88, "positions": ["CB"] },
   { "name": "Rudiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"] },
-  { "name": "Araujo", "club": "Barcelona", "rating": 87, "positions": ["CB"] },
+  { "name": "Araújo", "club": "Barcelona", "rating": 87, "positions": ["CB"] },
   { "name": "Saliba", "club": "Arsenal", "rating": 86, "positions": ["CB"] },
 
-  { "name": "Joao Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
+  { "name": "João Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
   { "name": "Alexander-Arnold", "club": "Real Madrid", "rating": 87, "positions": ["RB", "RM"] },
 
   { "name": "Ter Stegen", "club": "Barcelona", "rating": 89, "positions": ["GK"] },
