@@ -78,14 +78,13 @@ formationPositions.forEach((p, index) => {
   div.style.gridRowStart = p.row + 1;
 
   if (p.pos === "GK") {
-    // GK column = average of the two CB columns
-    const cbCols = formationPositions
-      .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
-      .map(pos => pos.col);
-    const centerCol = Math.floor((cbCols[0] + cbCols[1]) / 2) + 1;
-    div.style.gridColumnStart = centerCol;
+    // make the GK span two columns to appear centered
+    div.style.gridColumnStart = 1;
+    div.style.gridColumnEnd = 3; // spans 2 columns
+    div.style.textAlign = "center"; // optional for centering text
   } else {
     div.style.gridColumnStart = p.col + 1;
+    div.style.gridColumnEnd = "auto";
   }
 
   div.onclick = () => openPicker(p.pos, index);
