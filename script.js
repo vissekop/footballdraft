@@ -48,8 +48,7 @@ function startDraft(formation) {
 }
 
 
-  renderPitch();
-}
+
 
 function renderPitch() {
   const pitch = document.getElementById("pitch");
