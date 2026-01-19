@@ -115,7 +115,7 @@ function openPicker(position, index) {
   randomSix.forEach(player => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<b>${player.name}</b><br>${player.club}<br>Rating: ${player.rating}`;
+    card.innerHTML = `<b>${player.name}</b><br>${player.club}`;
     card.onclick = () => pickPlayer(player);
     options.appendChild(card);
   });
