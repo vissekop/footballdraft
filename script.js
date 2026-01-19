@@ -15,23 +15,24 @@ const formationPositionsData = {
 "4-4-2": [
   // Strikers
   { pos: "ST", row: 0, col: 1 },
-  { pos: "ST", row: 0, col: 2 },
+  { pos: "ST", row: 0, col: 3 },
 
   // Midfielders
   { pos: "LM", row: 1, col: 0 },
   { pos: "CM", row: 1, col: 1 },
-  { pos: "CM", row: 1, col: 2 },
-  { pos: "RM", row: 1, col: 3 },
+  { pos: "CM", row: 1, col: 3 },
+  { pos: "RM", row: 1, col: 4 },
 
   // Defenders
   { pos: "LB", row: 2, col: 0 },
   { pos: "CB", row: 2, col: 1 },
-  { pos: "CB", row: 2, col: 2 },
-  { pos: "RB", row: 2, col: 3 },
+  { pos: "CB", row: 2, col: 3 },
+  { pos: "RB", row: 2, col: 4 },
 
   // Goalkeeper
-  { pos: "GK", row: 3, col: 1 }  // centered under the two CBs
+  { pos: "GK", row: 3, col: 2 } // centered under the CBs
 ]
+
 
 };
 
