@@ -6,7 +6,7 @@
   { "name": "Courtois", "club": "Real Madrid", "rating": 90, "positions": ["GK"] },
   { "name": "Van Dijk", "club": "Liverpool", "rating": 89, "positions": ["CB"] },
   { "name": "Hakimi", "club": "PSG", "rating": 86, "positions": ["RB", "RM"] },
-  { "name": "Theo Hernandez", "club": "Al Hilal", "rating": 86, "positions": ["LB"] },
+  { "name": "Theo Hernandez", "club": "Al Hilal", "rating": 86, "positions": ["LB", "LM"] },
 
   { "name": "Ronaldo", "club": "Al Nassr", "rating": 88, "positions": ["ST", "LW"] },
   { "name": "Neymar", "club": "Santos", "rating": 89, "positions": ["LW", "CAM"] },
@@ -41,7 +41,7 @@
   { "name": "Luis Díaz", "club": "Bayern", "rating": 87, "positions": ["LM", "LW"] },
   { "name": "Doku", "club": "Man City", "rating": 86, "positions": ["LW", "RW", "LM"] },
   { "name": "Semenyo", "club": "Man City", "rating": 84, "positions": ["LW", "LM", "RM"] },
-  { "name": "Barcola", "club": "PSG", "rating": 86, "positions": ["LM", "RB","LB"] },
+  { "name": "Barcola", "club": "PSG", "rating": 86, "positions": ["LM", "RW","LW"] },
 
   { "name": "João Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"] },
   { "name": "Alexander-Arnold", "club": "Real Madrid", "rating": 87, "positions": ["RB", "RM"] },
