@@ -138,3 +138,12 @@ function pickPlayer(player) {
   document.getElementById("pickerScreen").classList.add("hidden");
   renderPitch();
 }
+document.getElementById("restartBtn").onclick = () => {
+    // Show the formation screen again
+    document.getElementById("formationScreen").classList.remove("hidden");
+    // Hide pitch and picker screens
+    document.getElementById("pitchScreen").classList.add("hidden");
+    document.getElementById("pickerScreen").classList.add("hidden");
+    // Clear previous squad
+    squad = {};
+};
