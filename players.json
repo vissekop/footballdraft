@@ -1,1 +1,11 @@
-[]
+[
+  { "name": "Messi", "club": "Inter Miami", "rating": 90, "positions": ["RW", "CF"] },
+  { "name": "Haaland", "club": "Man City", "rating": 91, "positions": ["ST"] },
+  { "name": "Mbappe", "club": "PSG", "rating": 91, "positions": ["ST", "LW"] },
+  { "name": "De Bruyne", "club": "Man City", "rating": 91, "positions": ["CM"] },
+  { "name": "Courtois", "club": "Real Madrid", "rating": 90, "positions": ["GK"] },
+  { "name": "Van Dijk", "club": "Liverpool", "rating": 89, "positions": ["CB"] },
+  { "name": "Hakimi", "club": "PSG", "rating": 86, "positions": ["RB"] },
+  { "name": "Theo Hernandez", "club": "AC Milan", "rating": 86, "positions": ["LB"] }
+]
+
