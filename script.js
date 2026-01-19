@@ -13,25 +13,26 @@ const formationPositionsData = {
     { pos: "GK", row: 3, col: 2 }
   ],
 "4-4-2": [
-  // Strikers
+  // Strikers (closer together)
   { pos: "ST", row: 0, col: 1 },
-  { pos: "ST", row: 0, col: 3 },
+  { pos: "ST", row: 0, col: 2 },
 
-  // Midfielders
+  // Midfielders (closer together)
   { pos: "LM", row: 1, col: 0 },
   { pos: "CM", row: 1, col: 1 },
-  { pos: "CM", row: 1, col: 3 },
-  { pos: "RM", row: 1, col: 4 },
+  { pos: "CM", row: 1, col: 2 },
+  { pos: "RM", row: 1, col: 3 },
 
-  // Defenders
+  // Defenders (closer together)
   { pos: "LB", row: 2, col: 0 },
   { pos: "CB", row: 2, col: 1 },
-  { pos: "CB", row: 2, col: 3 },
-  { pos: "RB", row: 2, col: 4 },
+  { pos: "CB", row: 2, col: 2 },
+  { pos: "RB", row: 2, col: 3 },
 
-  // Goalkeeper
-  { pos: "GK", row: 3, col: 2 } // centered under the CBs
+  // Goalkeeper (visually centered)
+  { pos: "GK", row: 3, col: 1 } // GK visually between the two CBs
 ]
+
 
 
 };
@@ -68,18 +69,25 @@ function renderPitch() {
   pitch.style.gridTemplateRows = `repeat(4, 80px)`; // 4 lines
   pitch.style.gridTemplateColumns = `repeat(5, 1fr)`; // 5 columns
 
-  formationPositions.forEach((p, index) => {
-    const div = document.createElement("div");
-    div.className = "position";
-    div.innerText = squad[index] ? squad[index].name : p.pos;
+formationPositions.forEach((p, index) => {
+  const div = document.createElement("div");
+  div.className = "position";
+  div.innerText = squad[index] ? squad[index].name : p.pos;
 
-    // place the position in the correct row/column
-    div.style.gridRowStart = p.row + 1;
+  // place the position in the correct row
+  div.style.gridRowStart = p.row + 1;
+
+  // special rule: center the goalkeeper visually
+  if (p.pos === "GK") {
+    div.style.gridColumnStart = 1.5; // visually centered under CBs
+  } else {
     div.style.gridColumnStart = p.col + 1;
+  }
 
-    div.onclick = () => openPicker(p.pos, index);
-    pitch.appendChild(div);
-  });
+  div.onclick = () => openPicker(p.pos, index);
+  pitch.appendChild(div);
+});
+
 }
 
 
