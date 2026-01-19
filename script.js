@@ -39,7 +39,93 @@ const formationPositionsData = {
 
   // Goalkeeper
   { pos: "GK", row: 3, col: 0 } // column will be set dynamically
-]
+],
+
+ "5-3-2": [
+    // Strikers
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+
+    // Midfielders
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 2 },
+    { pos: "CM", row: 1, col: 3 },
+
+    // Defenders
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+
+    // Goalkeeper
+    { pos: "GK", row: 3, col: 2 }
+  ],
+
+  "3-4-3": [
+    // Forwards
+    { pos: "LW", row: 0, col: 0 },
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "RW", row: 0, col: 4 },
+
+    // Midfielders
+    { pos: "LM", row: 1, col: 0 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "RM", row: 1, col: 4 },
+
+    // Defenders
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+
+    // Goalkeeper
+    { pos: "GK", row: 3, col: 2 }
+  ],
+
+  "4-2-4": [
+    // Forwards
+    { pos: "LW", row: 0, col: 0 },
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "RW", row: 0, col: 4 },
+
+    // Midfielders
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+
+    // Defenders
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "RB", row: 2, col: 4 },
+
+    // Goalkeeper
+    { pos: "GK", row: 3, col: 2 }
+  ],
+
+  "5-4-1": [
+    // Striker
+    { pos: "ST", row: 0, col: 2 },
+
+    // Midfielders
+    { pos: "LM", row: 1, col: 0 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "RM", row: 1, col: 4 },
+
+    // Defenders
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+
+    // Goalkeeper
+    { pos: "GK", row: 3, col: 2 }
+  ]
+};
+
 
 };
 
