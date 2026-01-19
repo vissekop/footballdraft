@@ -69,28 +69,33 @@ function renderPitch() {
   pitch.style.gridTemplateColumns = `repeat(5, 1fr)`;
 
   formationPositions.forEach((p, index) => {
-    const div = document.createElement("div");
-    div.className = "position";
-    div.innerText = squad[index] ? squad[index].name : p.pos;
+  const div = document.createElement("div");
+  div.className = "position";
+  div.innerText = squad[index] ? squad[index].name : p.pos;
 
-    div.style.gridRowStart = p.row + 1;
+  div.style.gridRowStart = p.row + 1;
 
-    // Special handling for the goalkeeper
-    if (p.pos === "GK") {
-      // Span columns to visually center GK under CBs
-      // 4-3-3: CBs at col 1 and 3 → GK col 2
-      // 4-4-2: CBs at col 1 and 2 → GK col 2
-      div.style.gridColumnStart = 2;
-      div.style.gridColumnEnd = 3;
-      div.style.textAlign = "center";
-    } else {
-      div.style.gridColumnStart = p.col + 1;
-      div.style.gridColumnEnd = "auto";
-    }
+  if (p.pos === "GK") {
+    // Find CBs in the same formation row
+    const cbCols = formationPositions
+      .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
+      .map(pos => pos.col);
 
-    div.onclick = () => openPicker(p.pos, index);
-    pitch.appendChild(div);
-  });
+    // Calculate center column
+    const centerCol = Math.round((cbCols[0] + cbCols[1]) / 2) + 1;
+
+    div.style.gridColumnStart = centerCol;
+    div.style.gridColumnEnd = centerCol + 1; // span 1 column
+    div.style.textAlign = "center";
+  } else {
+    div.style.gridColumnStart = p.col + 1;
+    div.style.gridColumnEnd = "auto";
+  }
+
+  div.onclick = () => openPicker(p.pos, index);
+  pitch.appendChild(div);
+});
+
 }
 
 function openPicker(position, index) {
