@@ -64,7 +64,7 @@ const formationPositionsData = {
     { pos: "CM", row: 1, col: 3 },
     { pos: "LB", row: 2, col: 0 },
     { pos: "CB", row: 2, col: 1 },
-    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
     { pos: "RB", row: 2, col: 4 },
     { pos: "GK", row: 3, col: 2 }
   ],
