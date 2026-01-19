@@ -106,21 +106,28 @@ function openPicker(position, index) {
   currentPosition = index;
   document.getElementById("pickerScreen").classList.remove("hidden");
 
-  const eligible = players.filter(p =>
-    p.positions.includes(position) &&
-    !Object.values(squad).some(player => player && player.name === p.name)
-);
-
-
-  const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
+  // Filter players eligible for this position AND not already picked
+  const eligible = players.filter(p => 
+      p.positions.includes(position) && 
+      !Object.values(squad).some(s => s && s.name === p.name)
+  );
 
   const options = document.getElementById("options");
   options.innerHTML = "";
 
+  // Show a message if no players are left
+  if (eligible.length === 0) {
+      options.innerHTML = "<i>No eligible players left for this position</i>";
+      return;
+  }
+
+  // Pick 6 random options from eligible
+  const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
+
   randomSix.forEach(player => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<b>${player.name}</b><br>${player.club}`;
+    card.innerHTML = `<b>${player.name}</b><br>${player.club}`; // rating removed
     card.onclick = () => pickPlayer(player);
     options.appendChild(card);
   });
