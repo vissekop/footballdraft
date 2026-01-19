@@ -2,10 +2,10 @@
   { "name": "Messi", "club": "Inter Miami", "rating": 90, "positions": ["RW", "CAM", "ST"] },
   { "name": "Haaland", "club": "Man City", "rating": 91, "positions": ["ST"] },
   { "name": "Mbappé", "club": "Real Madrid", "rating": 91, "positions": ["ST", "LW"] },
-  { "name": "De Bruyne", "club": "Napoli", "rating": 91, "positions": ["CM"] },
+  { "name": "De Bruyne", "club": "Napoli", "rating": 91, "positions": ["CM", "CAM"] },
   { "name": "Courtois", "club": "Real Madrid", "rating": 90, "positions": ["GK"] },
   { "name": "Van Dijk", "club": "Liverpool", "rating": 89, "positions": ["CB"] },
-  { "name": "Hakimi", "club": "PSG", "rating": 86, "positions": ["RB"] },
+  { "name": "Hakimi", "club": "PSG", "rating": 86, "positions": ["RB", "RM"] },
   { "name": "Theo Hernandez", "club": "Al Hilal", "rating": 86, "positions": ["LB"] },
 
   { "name": "Ronaldo", "club": "Al Nassr", "rating": 88, "positions": ["ST", "LW"] },
@@ -24,7 +24,7 @@
   { "name": "Osimhen", "club": "Galatasaray", "rating": 88, "positions": ["ST"] },
 
   { "name": "Rodri", "club": "Man City", "rating": 89, "positions": ["CM", "CDM"] },
-  { "name": "Kimmich", "club": "Bayern", "rating": 88, "positions": ["CM", "RB"] },
+  { "name": "Kimmich", "club": "Bayern", "rating": 88, "positions": ["CM", "RB", "CDM"] },
 
   { "name": "Marquinhos", "club": "PSG", "rating": 88, "positions": ["CB"] },
   { "name": "Rudiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"] },
