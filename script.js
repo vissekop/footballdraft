@@ -147,3 +147,12 @@ document.getElementById("restartBtn").onclick = () => {
     // Clear previous squad
     squad = {};
 };
+document.getElementById("restartBtn").onclick = () => {
+    // Show formation selection
+    document.getElementById("formationScreen").classList.remove("hidden");
+    // Hide pitch and picker screens
+    document.getElementById("pitchScreen").classList.add("hidden");
+    document.getElementById("pickerScreen").classList.add("hidden");
+    // Clear previous squad
+    squad = {};
+};
