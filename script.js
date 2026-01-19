@@ -12,19 +12,27 @@ const formationPositionsData = {
     { pos: "RB", row: 2, col: 4 },
     { pos: "GK", row: 3, col: 2 }
   ],
-  "4-4-2": [
-    { pos: "LM", row: 0, col: 0 },
-    { pos: "CM", row: 0, col: 1 },
-    { pos: "CM", row: 0, col: 2 },
-    { pos: "RM", row: 0, col: 3 },
-    { pos: "LB", row: 1, col: 0 },
-    { pos: "CB", row: 1, col: 1 },
-    { pos: "CB", row: 1, col: 2 },
-    { pos: "RB", row: 1, col: 3 },
-    { pos: "ST", row: 2, col: 1 },
-    { pos: "ST", row: 2, col: 2 },
-    { pos: "GK", row: 3, col: 2 }
-  ]
+"4-4-2": [
+  // Strikers
+  { pos: "ST", row: 0, col: 1 },
+  { pos: "ST", row: 0, col: 2 },
+
+  // Midfielders
+  { pos: "LM", row: 1, col: 0 },
+  { pos: "CM", row: 1, col: 1 },
+  { pos: "CM", row: 1, col: 2 },
+  { pos: "RM", row: 1, col: 3 },
+
+  // Defenders
+  { pos: "LB", row: 2, col: 0 },
+  { pos: "CB", row: 2, col: 1 },
+  { pos: "CB", row: 2, col: 2 },
+  { pos: "RB", row: 2, col: 3 },
+
+  // Goalkeeper
+  { pos: "GK", row: 3, col: 1 }  // centered under the two CBs
+]
+
 };
 
 let players = [];
