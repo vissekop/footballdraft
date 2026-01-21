@@ -1,9 +1,16 @@
 body {
   font-family: Arial, sans-serif;
-  background: #0b6623;
   color: white;
   text-align: center;
+
+  /* Background settings */
+  background-image: url('images/backgrounds/background.jpg'); /* path to your image */
+  background-size: cover;           /* make it cover the entire screen */
+  background-position: center;      /* center the image */
+  background-repeat: no-repeat;     /* don’t repeat it */
+  background-attachment: fixed;     /* keeps it in place when scrolling */
 }
+
 
 button {
   padding: 10px 20px;
