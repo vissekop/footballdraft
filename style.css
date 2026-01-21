@@ -113,3 +113,11 @@ button {
     width: 120px;
   }
 }
+
+.card img, .position img {
+  width: 60px;      /* or adjust to taste */
+  height: 60px;     /* keeps it square */
+  object-fit: cover; /* ensures it fills the box nicely */
+  border-radius: 50%; /* makes it circular if you want */
+  margin-bottom: 5px; /* some spacing from text */
+}

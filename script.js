@@ -111,7 +111,14 @@ function renderPitch() {
   formationPositions.forEach((p, index) => {
     const div = document.createElement("div");
     div.className = "position";
-    div.innerText = squad[index] ? squad[index].name : p.pos;
+if (squad[index]) {
+  div.innerHTML = `
+    <img src="images/players/${squad[index].photo}" alt="${squad[index].name}" class="player-photo">
+    <span>${squad[index].name}</span>
+  `;
+} else {
+  div.innerText = p.pos;
+}
 
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
@@ -157,13 +164,17 @@ function openPicker(position, index) {
 
   const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
 
-  randomSix.forEach(player => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<b>${player.name}</b><br>${player.club}`;
-    card.onclick = () => pickPlayer(player);
-    options.appendChild(card);
-  });
+randomSix.forEach(player => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <img src="images/players/${player.photo}" alt="${player.name}" class="player-photo">
+    <b>${player.name}</b><br>${player.club}
+  `;
+  card.onclick = () => pickPlayer(player);
+  options.appendChild(card);
+});
+
 }
 
 
