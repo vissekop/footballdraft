@@ -168,12 +168,14 @@ randomSix.forEach(player => {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
-    <img src="images/players/${player.photo}" alt="${player.name}" class="player-photo">
-    <b>${player.name}</b><br>${player.club}
+    <img src="images/players/${player.photo}" alt="${player.name}">
+    <b>${player.name}</b>
+    <span>${player.club}</span>
   `;
   card.onclick = () => pickPlayer(player);
   options.appendChild(card);
 });
+
 
 }
 
