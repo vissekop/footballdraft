@@ -151,11 +151,8 @@ button {
 }
 
 .position span {
-  font-size: 12px;     /* keep name small under the photo */
+  font-size: 12px;       /* slightly bigger for readability */
+  white-space: normal;   
+  word-break: break-word; 
 }
 
-.position span {
-  font-size: 10px;       /* small enough to fit */
-  white-space: normal;   /* allow wrapping */
-  word-break: break-word; /* break long names */
-}
