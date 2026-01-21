@@ -134,3 +134,15 @@ button {
   justify-content: center; /* center the cards horizontally */
   gap: 15px;           /* space between cards */
 }
+
+.position img.player-photo {
+  width: 40px;         /* small enough to fit inside the grid cell */
+  height: 40px;        /* square/circle */
+  object-fit: cover;   /* crop nicely if the image isn’t square */
+  border-radius: 50%;  /* circle photo */
+  margin-bottom: 3px;  /* space between photo and name */
+}
+
+.position span {
+  font-size: 12px;     /* keep name small under the photo */
+}
