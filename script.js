@@ -167,16 +167,6 @@ function openPicker(position, index) {
 }
 
 
-  const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
-
-  randomSix.forEach(player => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<b>${player.name}</b><br>${player.club}`;
-    card.onclick = () => pickPlayer(player);
-    options.appendChild(card);
-  });
-}
 
 function pickPlayer(player) {
   squad[currentPosition] = player;
