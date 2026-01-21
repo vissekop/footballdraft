@@ -158,6 +158,8 @@ function openPicker(position, index) {
   currentPosition = index;
 
   document.getElementById("pickerScreen").classList.remove("hidden");
+  renderPitch();
+
 
   const eligible = players.filter(p => 
     p.positions.includes(position) &&
