@@ -87,6 +87,7 @@ const formationPositionsData = {
 let players = [];
 let formationPositions = [];
 let currentPosition = null;
+let pickerOpen = false;
 let squad = {};
 
 fetch("players.json")
@@ -111,34 +112,42 @@ function renderPitch() {
     const div = document.createElement("div");
     div.className = "position";
     div.innerText = squad[index] ? squad[index].name : p.pos;
-    div.style.gridRowStart = p.row + 1;
 
-    if (p.pos === "GK") {
-      const cbCols = formationPositions
-        .filter(pos => pos.row === 2 && pos.pos.includes("CB"))
-        .map(pos => pos.col);
-      const minCol = Math.min(...cbCols);
-      const maxCol = Math.max(...cbCols);
-      const centerCol = Math.floor((minCol + maxCol) / 2) + 1;
-      div.style.gridColumnStart = centerCol;
-      div.style.gridColumnEnd = centerCol + 1;
-      div.style.textAlign = "center";
-    } else {
-      div.style.gridColumnStart = p.col + 1;
-      div.style.gridColumnEnd = "auto";
+    div.style.gridRowStart = p.row + 1;
+    div.style.gridColumnStart = p.col + 1;
+
+    // If this position already has a player → lock it
+    if (squad[index]) {
+      div.style.opacity = "0.7";
+      div.style.cursor = "default";
+    } 
+    // If picker is open → block all clicks
+    else if (pickerOpen) {
+      div.style.cursor = "not-allowed";
+    } 
+    // Otherwise allow clicking
+    else {
+      div.onclick = () => openPicker(p.pos, index);
     }
 
-    div.onclick = () => openPicker(p.pos, index);
     pitch.appendChild(div);
   });
 }
 
+
 function openPicker(position, index) {
+  // Block if picker already open
+  if (pickerOpen) return;
+
+  // Block if position already filled
+  if (squad[index]) return;
+
+  pickerOpen = true;
   currentPosition = index;
 
   document.getElementById("pickerScreen").classList.remove("hidden");
 
-  const eligible = players.filter(p =>
+  const eligible = players.filter(p => 
     p.positions.includes(position) &&
     !Object.values(squad).some(s => s && s.name === p.name)
   );
@@ -146,10 +155,17 @@ function openPicker(position, index) {
   const options = document.getElementById("options");
   options.innerHTML = "";
 
-  if (eligible.length === 0) {
-    options.innerHTML = "<i>No eligible players left for this position</i>";
-    return;
-  }
+  const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
+
+  randomSix.forEach(player => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<b>${player.name}</b><br>${player.club}`;
+    card.onclick = () => pickPlayer(player);
+    options.appendChild(card);
+  });
+}
+
 
   const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
 
@@ -164,9 +180,14 @@ function openPicker(position, index) {
 
 function pickPlayer(player) {
   squad[currentPosition] = player;
+
+  pickerOpen = false;
+  currentPosition = null;
+
   document.getElementById("pickerScreen").classList.add("hidden");
   renderPitch();
 }
+
 
 // Restart draft
 document.getElementById("restartBtn").onclick = () => {
