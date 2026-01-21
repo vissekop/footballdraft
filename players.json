@@ -32,7 +32,7 @@
   { "name": "Kimmich", "club": "Bayern", "rating": 88, "positions": ["CM", "RB", "CDM"], "photo": "kimmich.png" },
 
   { "name": "Marquinhos", "club": "PSG", "rating": 88, "positions": ["CB"], "photo": "marquinhos.png" },
-  { "name": "Rudiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"], "photo": "rudiger.png" },
+  { "name": "Rüdiger", "club": "Real Madrid", "rating": 87, "positions": ["CB"], "photo": "rudiger.png" },
   { "name": "Araújo", "club": "Barcelona", "rating": 87, "positions": ["CB"], "photo": "araujo.png" },
   { "name": "Saliba", "club": "Arsenal", "rating": 86, "positions": ["CB"], "photo": "saliba.png" },
 
@@ -43,7 +43,7 @@
   { "name": "Semenyo", "club": "Man City", "rating": 84, "positions": ["LW", "LM", "RM"], "photo": "semenyo.png" },
   { "name": "Barcola", "club": "PSG", "rating": 86, "positions": ["LM", "RW","LW"], "photo": "barcola.png" },
 
-  { "name": "João Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"], "photo": "joao_cancelo.png" },
+  { "name": "Cancelo", "club": "Barcelona", "rating": 86, "positions": ["LB", "RB"], "photo": "cancelo.png" },
   { "name": "Alexander-Arnold", "club": "Real Madrid", "rating": 87, "positions": ["RB", "RM"], "photo": "alexander_arnold.png" },
   { "name": "Lewandowski", "club": "Barcelona", "rating": 88, "positions": ["ST"], "photo": "lewandowski.png" },
   { "name": "Rodrygo", "club": "Real Madrid", "rating": 86, "positions": ["RW", "ST"], "photo": "rodrygo.png" },
