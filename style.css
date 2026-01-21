@@ -127,3 +127,10 @@ button {
 .card b {
   margin-bottom: 3px; /* space between name and club */
 }
+
+#options {
+  display: flex;       /* arrange children in a row by default */
+  flex-wrap: wrap;     /* allow the cards to go to next row if they don’t fit */
+  justify-content: center; /* center the cards horizontally */
+  gap: 15px;           /* space between cards */
+}
