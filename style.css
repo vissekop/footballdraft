@@ -83,7 +83,7 @@ button {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #19181b
+  background-color: rgba(0, 0, 0, 0.5); /* dark see-through */
   color: white;
   cursor: pointer;
   position: absolute;  /* float at top-right */
@@ -96,7 +96,7 @@ button {
 }
 
 #restartBtn:hover {
-  background-color: #45a049; /* darker on hover */
+  background-color: rgba(255, 255, 255, 0.3); /* light overlay on hover */
 }
 
 .formation-grid {
