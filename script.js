@@ -123,19 +123,32 @@ if (squad[index]) {
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
 
-    // If this position already has a player → lock it
-    if (squad[index]) {
-      div.style.opacity = "0.7";
-      div.style.cursor = "default";
-    } 
-    // If picker is open → block all clicks
-    else if (pickerOpen) {
-      div.style.cursor = "not-allowed";
-    } 
-    // Otherwise allow clicking
-    else {
-      div.onclick = () => openPicker(p.pos, index);
-    }
+   // Reset state
+div.classList.remove("selectable");
+div.onclick = null;
+
+// Reset state first
+div.classList.remove("selectable");
+div.onclick = null;
+div.style.opacity = "1";
+div.style.cursor = "default";
+
+// If this position already has a player → lock it
+if (squad[index]) {
+  div.style.opacity = "0.7";
+  div.style.cursor = "default";
+} 
+// If picker is open → disable positions
+else if (pickerOpen) {
+  div.style.cursor = "not-allowed";
+} 
+// Otherwise → allow hover & click
+else {
+  div.classList.add("selectable");
+  div.style.cursor = "pointer";
+  div.onclick = () => openPicker(p.pos, index);
+}
+
 
     pitch.appendChild(div);
   });
@@ -153,6 +166,8 @@ function openPicker(position, index) {
   currentPosition = index;
 
   document.getElementById("pickerScreen").classList.remove("hidden");
+  renderPitch();
+
 
   const eligible = players.filter(p => 
     p.positions.includes(position) &&
@@ -168,12 +183,14 @@ randomSix.forEach(player => {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
-    <img src="images/players/${player.photo}" alt="${player.name}" class="player-photo">
-    <b>${player.name}</b><br>${player.club}
+    <img src="images/players/${player.photo}" alt="${player.name}">
+    <b>${player.name}</b>
+    <span>${player.club}</span>
   `;
   card.onclick = () => pickPlayer(player);
   options.appendChild(card);
 });
+
 
 }
 

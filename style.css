@@ -1,8 +1,25 @@
 body {
   font-family: Arial, sans-serif;
-  background: #0b6623;
   color: white;
   text-align: center;
+
+  /* Background settings */
+  background-image: url('images/backgrounds/background.jpg'); /* path to your image */
+  background-size: cover;           /* make it cover the entire screen */
+  background-position: center;      /* center the image */
+  background-repeat: no-repeat;     /* don’t repeat it */
+  background-attachment: fixed;     /* keeps it in place when scrolling */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* semi-transparent black overlay */
+  z-index: -1;                 /* stays behind all content */
 }
 
 button {
@@ -26,15 +43,22 @@ button {
 }
 
 .position {
+  width: 80px;          /* bigger circle */
+  height: 80px;
   background: #1c8c4a;
-  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  flex-direction: column; /* allow photo and name vertically */
   justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;    /* center text inside */
+  overflow: hidden;      /* crop anything that overflows */
+  padding: 5px;          /* reduce padding so it doesn't add extra size */
 }
+
+
 
 .card {
   background: gold;
@@ -42,7 +66,9 @@ button {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
   width: 120px;
   cursor: pointer;
 }
@@ -114,10 +140,57 @@ button {
   }
 }
 
-.card img, .position img {
-  width: 60px;      /* or adjust to taste */
-  height: 60px;     /* keeps it square */
-  object-fit: cover; /* ensures it fills the box nicely */
-  border-radius: 50%; /* makes it circular if you want */
-  margin-bottom: 5px; /* some spacing from text */
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%; /* circle photo */
+  margin-bottom: 5px; /* space between photo and name */
 }
+
+.card b {
+  margin-bottom: 3px; /* space between name and club */
+}
+
+#options {
+  display: flex;       /* arrange children in a row by default */
+  flex-wrap: wrap;     /* allow the cards to go to next row if they don’t fit */
+  justify-content: center; /* center the cards horizontally */
+  gap: 15px;           /* space between cards */
+}
+
+.position img.player-photo {
+  width: 40px;         /* small enough to fit inside the grid cell */
+  height: 40px;        /* square/circle */
+  object-fit: cover;   /* crop nicely if the image isn’t square */
+  border-radius: 50%;  /* circle photo */
+  margin-bottom: 3px;  /* space between photo and name */
+}
+
+.position span {
+  font-size: 12px;       /* slightly bigger for readability */
+  white-space: normal;   
+  word-break: break-word; 
+}
+
+/* Hover only for selectable positions */
+.position.selectable:hover {
+  background: #27ae60;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth animation */
+.position {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px gold;
+}
+
