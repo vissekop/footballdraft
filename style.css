@@ -26,15 +26,20 @@ button {
 }
 
 .position {
+  width: 60px;          /* fixed width */
+  height: 60px;         /* fixed height */
   background: #1c8c4a;
-  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  flex-direction: column; /* allows photo on top, name under */
   justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;    /* center text inside the circle */
+  overflow: hidden;      /* crop anything that overflows */
 }
+
 
 .card {
   background: gold;
