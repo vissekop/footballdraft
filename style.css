@@ -26,19 +26,21 @@ button {
 }
 
 .position {
-  width: 60px;          /* fixed width */
-  height: 60px;         /* fixed height */
+  width: 80px;          /* bigger circle */
+  height: 80px;
   background: #1c8c4a;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* allows photo on top, name under */
+  flex-direction: column; /* allow photo and name vertically */
   justify-content: center;
   align-items: center;
   color: white;
-  text-align: center;    /* center text inside the circle */
+  text-align: center;    /* center text inside */
   overflow: hidden;      /* crop anything that overflows */
+  padding: 5px;          /* reduce padding so it doesn't add extra size */
 }
+
 
 
 .card {
