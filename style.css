@@ -175,7 +175,7 @@ button {
 
 /* Hover only for selectable positions */
 .position.selectable:hover {
-  background: #27ae60;
+  background: #f54464;
   transform: scale(1.08);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
