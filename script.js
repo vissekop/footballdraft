@@ -123,8 +123,12 @@ if (squad[index]) {
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
 
-    // If this position already has a player → lock it
- if (squad[index]) {
+   // Reset state
+div.classList.remove("selectable");
+div.onclick = null;
+
+// If this position already has a player → lock it
+if (squad[index]) {
   div.style.opacity = "0.7";
   div.style.cursor = "default";
 } 
@@ -132,7 +136,8 @@ else if (pickerOpen) {
   div.style.cursor = "not-allowed";
 } 
 else {
-  div.classList.add("selectable");   // 👈 add hover class
+  div.classList.add("selectable");   // enable hover
+  div.style.cursor = "pointer";
   div.onclick = () => openPicker(p.pos, index);
 }
 
