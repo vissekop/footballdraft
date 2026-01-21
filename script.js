@@ -24,7 +24,7 @@ const formationPositionsData = {
     { pos: "CB", row: 2, col: 1 },
     { pos: "CB", row: 2, col: 3 },
     { pos: "RB", row: 2, col: 4 },
-    { pos: "GK", row: 3, col: 0 } // dynamically centered
+    { pos: "GK", row: 3, col: 2 } // dynamically centered
   ],
 
   "5-3-2": [
