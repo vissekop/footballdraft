@@ -45,7 +45,7 @@ button {
 .position {
   width: 80px;          /* bigger circle */
   height: 80px;
-  background: #2596be;
+  background: #f82a4f;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
