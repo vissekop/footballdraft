@@ -42,7 +42,9 @@ button {
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
   width: 120px;
   cursor: pointer;
 }
@@ -114,10 +116,14 @@ button {
   }
 }
 
-.card img, .position img {
-  width: 60px;      /* or adjust to taste */
-  height: 60px;     /* keeps it square */
-  object-fit: cover; /* ensures it fills the box nicely */
-  border-radius: 50%; /* makes it circular if you want */
-  margin-bottom: 5px; /* some spacing from text */
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%; /* circle photo */
+  margin-bottom: 5px; /* space between photo and name */
+}
+
+.card b {
+  margin-bottom: 3px; /* space between name and club */
 }
