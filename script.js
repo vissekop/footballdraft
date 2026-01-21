@@ -127,16 +127,24 @@ if (squad[index]) {
 div.classList.remove("selectable");
 div.onclick = null;
 
+// Reset state first
+div.classList.remove("selectable");
+div.onclick = null;
+div.style.opacity = "1";
+div.style.cursor = "default";
+
 // If this position already has a player → lock it
 if (squad[index]) {
   div.style.opacity = "0.7";
   div.style.cursor = "default";
 } 
+// If picker is open → disable positions
 else if (pickerOpen) {
   div.style.cursor = "not-allowed";
 } 
+// Otherwise → allow hover & click
 else {
-  div.classList.add("selectable");   // enable hover
+  div.classList.add("selectable");
   div.style.cursor = "pointer";
   div.onclick = () => openPicker(p.pos, index);
 }
