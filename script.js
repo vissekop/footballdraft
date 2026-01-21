@@ -124,18 +124,18 @@ if (squad[index]) {
     div.style.gridColumnStart = p.col + 1;
 
     // If this position already has a player → lock it
-    if (squad[index]) {
-      div.style.opacity = "0.7";
-      div.style.cursor = "default";
-    } 
-    // If picker is open → block all clicks
-    else if (pickerOpen) {
-      div.style.cursor = "not-allowed";
-    } 
-    // Otherwise allow clicking
-    else {
-      div.onclick = () => openPicker(p.pos, index);
-    }
+ if (squad[index]) {
+  div.style.opacity = "0.7";
+  div.style.cursor = "default";
+} 
+else if (pickerOpen) {
+  div.style.cursor = "not-allowed";
+} 
+else {
+  div.classList.add("selectable");   // 👈 add hover class
+  div.onclick = () => openPicker(p.pos, index);
+}
+
 
     pitch.appendChild(div);
   });
