@@ -65,4 +65,83 @@
   { "name": "Ter Stegen", "club": "Barcelona", "rating": 89, "positions": ["GK"], "photo": "ter_stegen.png" },
   { "name": "Ederson", "club": "Fenerbahçe", "rating": 89, "positions": ["GK"], "photo": "ederson.png" },
   { "name": "Alisson", "club": "Liverpool", "rating": 89, "positions": ["GK"], "photo": "alisson.png" }
+
+  { "name": "Lamine Yamal", "club": "Barcelona", "rating": 88, "positions": ["RW", "RM"], "photo": "lamine_yamal.png" }
+{ "name": "Wirtz", "club": "Liverpool", "rating": 89, "positions": ["CAM", "CM"], "photo": "wirtz.png" }
+{ "name": "Isak", "club": "Liverpool", "rating": 88, "positions": ["ST"], "photo": "isak.png" }
+{ "name": "Musiala", "club": "Bayern", "rating": 90, "positions": ["CAM", "CM", "LM"], "photo": "musiala.png" }
+{ "name": "Saka", "club": "Arsenal", "rating": 89, "positions": ["RW"], "photo": "saka.png" }
+{ "name": "Lautaro Martínez", "club": "Inter", "rating": 90, "positions": ["ST"], "photo": "lautaro_martinez.png" }
+{ "name": "Palmer", "club": "Chelsea", "rating": 88, "positions": ["CAM", "RM", "CM"], "photo": "palmer.png" }
+{ "name": "Caicedo", "club": "Chelsea", "rating": 87, "positions": ["CDM", "CM"], "photo": "caicedo.png" }
+{ "name": "Gyökeres", "club": "Arsenal", "rating": 88, "positions": ["ST"], "photo": "gyokeres.png" }
+{ "name": "Mac Allister", "club": "Liverpool", "rating": 88, "positions": ["CM", "CAM", "CDM"], "photo": "mac_allister.png" }
+{ "name": "Bastoni", "club": "Inter", "rating": 89, "positions": ["CB"], "photo": "bastoni.png" }
+{ "name": "Rice", "club": "Arsenal", "rating": 90, "positions": ["CDM", "CM"], "photo": "rice.png" }
+{ "name": "de Jong", "club": "Barcelona", "rating": 89, "positions": ["CM", "CDM"], "photo": "de_jong.png" }
+{ "name": "Barella", "club": "Inter", "rating": 89, "positions": ["CM", "CAM"], "photo": "barella.png" }
+{ "name": "Ødegaard", "club": "Arsenal", "rating": 90, "positions": ["CAM", "CM"], "photo": "odegaard.png" }
+{ "name": "Raya", "club": "Arsenal", "rating": 87, "positions": ["GK"], "photo": "raya.png" }
+{ "name": "Maignan", "club": "AC Milan", "rating": 89, "positions": ["GK"], "photo": "maignan.png" }
+{ "name": "Guirassy", "club": "Dortmund", "rating": 87, "positions": ["ST"], "photo": "guirassy.png" }
+{ "name": "Tah", "club": "Bayern", "rating": 87, "positions": ["CB"], "photo": "tah.png" }
+{ "name": "Bruno Fernandes", "club": "Man United", "rating": 89, "positions": ["CAM", "CM"], "photo": "bruno_fernandes.png" }
+{ "name": "Sommer", "club": "Inter", "rating": 87, "positions": ["GK"], "photo": "sommer.png" }
+{ "name": "Nico Williams", "club": "Athletic Club", "rating": 88, "positions": ["LW", "LM"], "photo": "nico_williams.png" }
+{ "name": "Olise", "club": "Bayern", "rating": 88, "positions": ["RW", "CAM"], "photo": "olise.png" }
+{ "name": "Bruno Guimarães", "club": "Newcastle", "rating": 88, "positions": ["CM", "CDM"], "photo": "bruno_guimaraes.png" }
+{ "name": "Tonali", "club": "Newcastle", "rating": 87, "positions": ["CM", "CDM"], "photo": "tonali.png" }
+{ "name": "Reijnders", "club": "Man City", "rating": 87, "positions": ["CM", "CAM", "CDM"], "photo": "reijnders.png" }
+{ "name": "Konaté", "club": "Liverpool", "rating": 88, "positions": ["CB"], "photo": "konate.png" }
+{ "name": "Kobel", "club": "Dortmund", "rating": 88, "positions": ["GK"], "photo": "kobel.png" }
+{ "name": "Dybala", "club": "Roma", "rating": 88, "positions": ["CAM", "ST", "RW"], "photo": "dybala.png" }
+{ "name": "Çalhanoğlu", "club": "Inter", "rating": 89, "positions": ["CM", "CDM"], "photo": "calhanoglu.png" }
+{ "name": "Schlotterbeck", "club": "Dortmund", "rating": 87, "positions": ["CB"], "photo": "schlotterbeck.png" }
+{ "name": "Gravenberch", "club": "Liverpool", "rating": 86, "positions": ["CM", "CDM"], "photo": "gravenberch.png" }
+{ "name": "Dani Olmo", "club": "Barcelona", "rating": 88, "positions": ["CAM", "LW", "CM"], "photo": "dani_olmo.png" }
+{ "name": "Mbeumo", "club": "Man United", "rating": 87, "positions": ["RW", "ST", "CAM"], "photo": "mbeumo.png" }
+{ "name": "Foden", "club": "Man City", "rating": 91, "positions": ["CAM", "LW", "CM", "RW"], "photo": "foden.png" }
+
+  { "name": "Bremer", "club": "Juventus", "rating": 88, "positions": ["CB"], "photo": "bremer.png" }
+{ "name": "McTominay", "club": "Napoli", "rating": 85, "positions": ["CM", "CDM", "CAM", "LM"], "photo": "mctominay.png" }
+{ "name": "Schick", "club": "Leverkusen", "rating": 87, "positions": ["ST"], "photo": "schick.png" }
+{ "name": "Unai Simón", "club": "Athletic Club", "rating": 88, "positions": ["GK"], "photo": "unai_simon.png" }
+{ "name": "Upamecano", "club": "Bayern", "rating": 88, "positions": ["CB"], "photo": "upamecano.png" }
+{ "name": "Marcus Thuram", "club": "Inter", "rating": 88, "positions": ["ST", "LW"], "photo": "marcus_thuram.png" }
+{ "name": "Dimarco", "club": "Inter", "rating": 88, "positions": ["LM", "LB"], "photo": "dimarco.png" }
+{ "name": "Tielemans", "club": "Aston Villa", "rating": 87, "positions": ["CM", "CDM"], "photo": "tielemans.png" }
+{ "name": "Kanté", "club": "Al Ittihad", "rating": 86, "positions": ["CDM", "CM"], "photo": "kante.png" }
+{ "name": "Carvajal", "club": "Real Madrid", "rating": 88, "positions": ["RB"], "photo": "carvajal.png" }
+{ "name": "Iñigo Martínez", "club": "Al Nassr", "rating": 86, "positions": ["CB"], "photo": "inigo_martinez.png" }
+{ "name": "Emiliano Martínez", "club": "Aston Villa", "rating": 89, "positions": ["GK"], "photo": "emiliano_martinez.png" }
+{ "name": "Xhaka", "club": "Sunderland", "rating": 88, "positions": ["CM", "CDM"], "photo": "xhaka.png" }
+{ "name": "De Gea", "club": "Fiorentina", "rating": 87, "positions": ["GK"], "photo": "de_gea.png" }
+{ "name": "Benzema", "club": "Al Ittihad", "rating": 90, "positions": ["ST"], "photo": "benzema.png" }
+{ "name": "Xavi Simons", "club": "Tottenham", "rating": 88, "positions": ["CAM", "LW"], "photo": "xavi_simons.png" }
+{ "name": "Pavard", "club": "Marseille", "rating": 87, "positions": ["CB", "RB"], "photo": "pavard.png" }
+{ "name": "Mamardashvili", "club": "Liverpool", "rating": 88, "positions": ["GK"], "photo": "mamardashvili.png" }
+{ "name": "Vivian", "club": "Athletic Club", "rating": 85, "positions": ["CB"], "photo": "vivian.png" }
+{ "name": "Enzo Fernández", "club": "Chelsea", "rating": 88, "positions": ["CM", "CDM", "CAM"], "photo": "enzo_fernandez.png" }
+{ "name": "Sancet", "club": "Athletic Club", "rating": 86, "positions": ["CAM", "CM"], "photo": "sancet.png" }
+{ "name": "Gakpo", "club": "Liverpool", "rating": 87, "positions": ["LW", "ST"], "photo": "gakpo.png" }
+{ "name": "Tchouaméni", "club": "Real Madrid", "rating": 89, "positions": ["CDM", "CB", "CM"], "photo": "tchouameni.png" }
+{ "name": "Éder Militão", "club": "Real Madrid", "rating": 88, "positions": ["CB"], "photo": "eder_militao.png" }
+{ "name": "Cucurella", "club": "Chelsea", "rating": 85, "positions": ["LB"], "photo": "cucurella.png" }
+{ "name": "Diogo Costa", "club": "Porto", "rating": 88, "positions": ["GK"], "photo": "diogo_costa.png" }
+{ "name": "Davies", "club": "Bayern", "rating": 89, "positions": ["LB"], "photo": "davies.png" }
+{ "name": "Dumfries", "club": "Inter", "rating": 87, "positions": ["RM", "RB"], "photo": "dumfries.png" }
+{ "name": "Lookman", "club": "Atalanta", "rating": 87, "positions": ["LW", "ST", "CAM"], "photo": "lookman.png" }
+{ "name": "Grimaldo", "club": "Leverkusen", "rating": 89, "positions": ["LB", "LM"], "photo": "grimaldo.png" }
+{ "name": "Lukaku", "club": "Napoli", "rating": 87, "positions": ["ST"], "photo": "lukaku.png" }
+{ "name": "Openda", "club": "Juventus", "rating": 88, "positions": ["ST"], "photo": "openda.png" }
+{ "name": "Neuer", "club": "Bayern", "rating": 88, "positions": ["GK"], "photo": "neuer.png" }
+{ "name": "Gavi", "club": "Barcelona", "rating": 88, "positions": ["CM", "CVM", "CAM"], "photo": "gavi.png" }
+{ "name": "Balde", "club": "Barcelona", "rating": 86, "positions": ["LB"], "photo": "balde.png" }
+{ "name": "Chevalier", "club": "PSG", "rating": 86, "positions": ["GK"], "photo": "chevalier.png" }
+{ "name": "Sels", "club": "Nottingham Forest", "rating": 85, "positions": ["GK"], "photo": "sels.png" }
+{ "name": "Vicario", "club": "Tottenham", "rating": 88, "positions": ["GK"], "photo": "vicario.png" }
+{ "name": "Bounou", "club": "Al Hilal", "rating": 88, "positions": ["GK"], "photo": "bounou.png" }
+{ "name": "Casteels", "club": "Al Qadsiah", "rating": 87, "positions": ["GK"], "photo": "casteels.png" }
+{ "name": "Trafford", "club": "Man City", "rating": 84, "positions": ["GK"], "photo": "trafford.png" }
+
 ]
