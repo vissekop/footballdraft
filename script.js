@@ -212,20 +212,21 @@ else {
 
 
 function openPicker(position, index) {
-  // Block if picker already open
-  if (pickerOpen) return;
-
-  // Block if position already filled
-  if (squad[index]) return;
+  // Block if picker already open or position filled
+  if (pickerOpen || squad[index]) return;
 
   pickerOpen = true;
   currentPosition = index;
 
-  document.getElementById("pickerScreen").classList.remove("hidden");
-  renderPitch();
+  // Hide the formation/pitch
+  document.getElementById("pitchScreen").classList.add("hidden");
 
+  // Show the picker screen
+  const picker = document.getElementById("pickerScreen");
+  picker.classList.remove("hidden");
 
-  const eligible = players.filter(p => 
+  // Filter eligible players
+  const eligible = players.filter(p =>
     p.positions.includes(position) &&
     !Object.values(squad).some(s => s && s.name === p.name)
   );
@@ -233,23 +234,22 @@ function openPicker(position, index) {
   const options = document.getElementById("options");
   options.innerHTML = "";
 
-const randomFour = eligible.sort(() => 0.5 - Math.random()).slice(0, 4);
+  // Only 4 players
+  const randomFour = eligible.sort(() => 0.5 - Math.random()).slice(0, 4);
 
-randomFour.forEach(player => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-    <img src="images/players/${player.photo}" alt="${player.name}">
-    <b>${player.name}</b>
-    <span>${player.club}</span>
-  `;
-  card.onclick = () => pickPlayer(player);
-  options.appendChild(card);
-});
-
-
-
+  randomFour.forEach(player => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="images/players/${player.photo}" alt="${player.name}">
+      <b>${player.name}</b>
+      <span>${player.club}</span>
+    `;
+    card.onclick = () => pickPlayer(player);
+    options.appendChild(card);
+  });
 }
+
 
 
 
@@ -259,9 +259,13 @@ function pickPlayer(player) {
   pickerOpen = false;
   currentPosition = null;
 
+  // Hide picker and show formation/pitch again
   document.getElementById("pickerScreen").classList.add("hidden");
+  document.getElementById("pitchScreen").classList.remove("hidden");
+
   renderPitch();
 }
+
 
 
 // Restart draft
