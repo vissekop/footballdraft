@@ -162,7 +162,8 @@ function renderPitch() {
   const pitch = document.getElementById("pitch");
   pitch.innerHTML = "";
 
-  pitch.style.gridTemplateRows = `repeat(4, 80px)`;
+const maxRow = Math.max(...formationPositions.map(p => p.row));
+pitch.style.gridTemplateRows = `repeat(${maxRow + 1}, 80px)`;
   pitch.style.gridTemplateColumns = `repeat(5, 1fr)`;
 
   formationPositions.forEach((p, index) => {
@@ -180,9 +181,7 @@ if (squad[index]) {
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
 
-   // Reset state
-div.classList.remove("selectable");
-div.onclick = null;
+
 
 // Reset state first
 div.classList.remove("selectable");
