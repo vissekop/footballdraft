@@ -135,7 +135,7 @@
 { "name": "Lukaku", "club": "Napoli", "rating": 88, "positions": ["ST"], "photo": "lukaku.png" },
 { "name": "Openda", "club": "Juventus", "rating": 86, "positions": ["ST"], "photo": "openda.png" },
 { "name": "Neuer", "club": "Bayern", "rating": 90, "positions": ["GK"], "photo": "neuer.png" },
-{ "name": "Gavi", "club": "Barcelona", "rating": 86, "positions": ["CM", "CVM", "CAM"], "photo": "gavi.png" },
+{ "name": "Gavi", "club": "Barcelona", "rating": 86, "positions": ["CM", "CDM", "CAM"], "photo": "gavi.png" },
 { "name": "Balde", "club": "Barcelona", "rating": 87, "positions": ["LB"], "photo": "balde.png" },
 { "name": "Chevalier", "club": "PSG", "rating": 87, "positions": ["GK"], "photo": "chevalier.png" },
 { "name": "Sels", "club": "Nottingham Forest", "rating": 89, "positions": ["GK"], "photo": "sels.png" },
