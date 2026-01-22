@@ -228,4 +228,9 @@ button {
   align-items: center;       /* center vertically */
   z-index: 100;              /* above everything else */
   flex-direction: column;    /* stack title + options */
+  opacity: 0;
+  animation: fadeIn 0.25s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
