@@ -194,6 +194,9 @@ function openPicker(position, index) {
   document.getElementById("pitchScreen").classList.add("hidden");
   const picker = document.getElementById("pickerScreen");
   picker.classList.remove("hidden");
+  
+  // Update picker title to show position
+  picker.querySelector("h2").innerText = `Choose a player for ${position}`;
 
   const eligible = players.filter(p =>
     p.positions.includes(position) &&
