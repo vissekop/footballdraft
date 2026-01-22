@@ -233,9 +233,9 @@ function openPicker(position, index) {
   const options = document.getElementById("options");
   options.innerHTML = "";
 
-  const randomSix = eligible.sort(() => 0.5 - Math.random()).slice(0, 6);
+const randomFour = eligible.sort(() => 0.5 - Math.random()).slice(0, 4);
 
-randomSix.forEach(player => {
+randomFour.forEach(player => {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
@@ -246,6 +246,7 @@ randomSix.forEach(player => {
   card.onclick = () => pickPlayer(player);
   options.appendChild(card);
 });
+
 
 
 }
