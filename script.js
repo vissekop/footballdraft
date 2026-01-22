@@ -69,6 +69,20 @@ const formationPositionsData = {
     { pos: "GK", row: 3, col: 2 }
   ],
 
+    "4-3-1-2": [
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "CAM", row: 1, col: 2 },
+    { pos: "CM", row: 2, col: 1 },
+    { pos: "CM", row: 2, col: 2 },
+    { pos: "CM", row: 2, col: 3 },
+    { pos: "LB", row: 3, col: 0 },
+    { pos: "CB", row: 3, col: 1 },
+    { pos: "CB", row: 3, col: 3 },
+    { pos: "RB", row: 3, col: 4 },
+    { pos: "GK", row: 4, col: 2 }
+  ],
+  
   "5-4-1": [
     { pos: "ST", row: 0, col: 2 },
     { pos: "LM", row: 1, col: 0 },
