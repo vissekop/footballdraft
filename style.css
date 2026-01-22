@@ -148,22 +148,23 @@ button {
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
+  width: 80px;             /* bigger photo */
+  height: 80px;
   object-fit: cover;
-  border-radius: 50%; /* circle photo */
-  margin-bottom: 5px; /* space between photo and name */
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .card b {
-  margin-bottom: 3px; /* space between name and club */
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 #options {
-  display: flex;       /* arrange children in a row by default */
-  flex-wrap: wrap;     /* allow the cards to go to next row if they don’t fit */
+  display: flex;           /* row layout */
   justify-content: center; /* center the cards horizontally */
-  gap: 15px;           /* space between cards */
+  gap: 25px;               /* space between cards */
+  margin-top: 20px;        /* some space below title */
 }
 
 .position img.player-photo {
@@ -193,6 +194,15 @@ button {
 }
 
 .card {
+  background: #faf920;
+  color: black;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;           /* bigger card */
+  cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
