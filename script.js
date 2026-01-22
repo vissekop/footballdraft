@@ -137,12 +137,19 @@ function renderFormationChoices() {
   const randomFormations = getRandomFormations(3);
 
   randomFormations.forEach(formation => {
-    const btn = document.createElement("button");
-    btn.textContent = formation;
-    btn.onclick = () => startDraft(formation);
-    container.appendChild(btn);
+    const div = document.createElement("div");
+    div.className = "formation-option";
+    div.onclick = () => startDraft(formation);
+
+    div.innerHTML = `
+      <img src="images/formations/${formation.replace(/-/g, "")}.png" alt="${formation}">
+      <span>${formation}</span>
+    `;
+
+    container.appendChild(div);
   });
 }
+
 
 function startDraft(formation) {
   document.getElementById("formationScreen").classList.add("hidden");
