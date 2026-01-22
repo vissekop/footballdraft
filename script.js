@@ -112,6 +112,8 @@ const formationPositionsData = {
   ]
 };
 
+const allFormations = Object.keys(formationPositionsData);
+
 let players = [];
 let formationPositions = [];
 let currentPosition = null;
