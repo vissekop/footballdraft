@@ -1,54 +1,159 @@
-const formationPositionsData = { /* your formation data as before */ };
-const allFormations = Object.keys(formationPositionsData);
+// --- Formation Positions Data ---
+const formationPositionsData = {
+  "4-3-3": [
+    { pos: "LW", row: 0, col: 0 },
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "RW", row: 0, col: 4 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 2 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "GK", row: 3, col: 2 }
+  ],
+  "4-4-2": [
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "LM", row: 1, col: 0 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "RM", row: 1, col: 4 },
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "GK", row: 3, col: 2 }
+  ],
+  "3-4-2-1": [
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "CAM", row: 1, col: 1 },
+    { pos: "CAM", row: 1, col: 3 },
+    { pos: "LM", row: 2, col: 0 },
+    { pos: "CM", row: 2, col: 1 },
+    { pos: "CM", row: 2, col: 3 },
+    { pos: "RM", row: 2, col: 4 },
+    { pos: "CB", row: 3, col: 1 },
+    { pos: "CB", row: 3, col: 2 },
+    { pos: "CB", row: 3, col: 3 },
+    { pos: "GK", row: 4, col: 2 }
+  ],
+  "5-3-2": [
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 2 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "GK", row: 3, col: 2 }
+  ],
+  "3-4-3": [
+    { pos: "LW", row: 0, col: 0 },
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "RW", row: 0, col: 4 },
+    { pos: "LM", row: 1, col: 0 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "RM", row: 1, col: 4 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "GK", row: 3, col: 2 }
+  ],
+  "4-2-4": [
+    { pos: "LW", row: 0, col: 0 },
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "RW", row: 0, col: 4 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "GK", row: 3, col: 2 }
+  ],
+  "4-3-1-2": [
+    { pos: "ST", row: 0, col: 1 },
+    { pos: "ST", row: 0, col: 3 },
+    { pos: "CAM", row: 1, col: 2 },
+    { pos: "CM", row: 2, col: 1 },
+    { pos: "CM", row: 2, col: 2 },
+    { pos: "CM", row: 2, col: 3 },
+    { pos: "LB", row: 3, col: 0 },
+    { pos: "CB", row: 3, col: 1 },
+    { pos: "CB", row: 3, col: 3 },
+    { pos: "RB", row: 3, col: 4 },
+    { pos: "GK", row: 4, col: 2 }
+  ],
+  "5-4-1": [
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "LM", row: 1, col: 0 },
+    { pos: "CM", row: 1, col: 1 },
+    { pos: "CM", row: 1, col: 3 },
+    { pos: "RM", row: 1, col: 4 },
+    { pos: "LB", row: 2, col: 0 },
+    { pos: "CB", row: 2, col: 1 },
+    { pos: "CB", row: 2, col: 2 },
+    { pos: "CB", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "GK", row: 3, col: 2 }
+  ]
+};
 
+// --- Global Variables ---
+const allFormations = Object.keys(formationPositionsData);
 let players = [];
 let formationPositions = [];
 let currentPosition = null;
 let pickerOpen = false;
 let squad = {};
 
+// --- Load Players ---
 fetch("players.json")
   .then(res => res.json())
   .then(data => players = data);
 
+// --- Random Formations ---
 function getRandomFormations(amount = 3) {
   return allFormations.sort(() => 0.5 - Math.random()).slice(0, amount);
 }
 
+// --- Render Formation Options ---
 function renderFormationChoices() {
   const container = document.getElementById("formationOptions");
   container.innerHTML = "";
-
-  const randomFormations = getRandomFormations(3);
-
-  randomFormations.forEach(formation => {
+  getRandomFormations(3).forEach(formation => {
     const div = document.createElement("div");
     div.className = "formation-option";
     div.onclick = () => startDraft(formation);
-
     div.innerHTML = `
-      <img src="images/formations/${formation.replace(/-/g, "")}.png" alt="${formation}">
+      <img src="images/formations/${formation.replace(/-/g,"")}.png" alt="${formation}">
       <span>${formation}</span>
     `;
-
     container.appendChild(div);
   });
 }
 
+// --- Start Draft ---
 function startDraft(formation) {
   document.getElementById("formationScreen").classList.add("hidden");
   document.getElementById("pitchScreen").classList.remove("hidden");
-
   formationPositions = formationPositionsData[formation];
   renderPitch();
 }
 
+// --- Render Pitch ---
 function renderPitch() {
   const pitch = document.getElementById("pitch");
   pitch.innerHTML = "";
-
   const maxRow = Math.max(...formationPositions.map(p => p.row));
-  pitch.style.gridTemplateRows = `repeat(${maxRow + 1}, 80px)`;
+  pitch.style.gridTemplateRows = `repeat(${maxRow+1}, 80px)`;
 
   formationPositions.forEach((p, index) => {
     const div = document.createElement("div");
@@ -66,11 +171,7 @@ function renderPitch() {
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
 
-    // Handle interactivity
-    div.classList.remove("selectable");
-    div.onclick = null;
-    div.style.cursor = "default";
-
+    // Enable selection only if picker is closed
     if (!squad[index] && !pickerOpen) {
       div.classList.add("selectable");
       div.style.cursor = "pointer";
@@ -83,6 +184,7 @@ function renderPitch() {
   });
 }
 
+// --- Open Player Picker ---
 function openPicker(position, index) {
   if (pickerOpen || squad[index]) return;
 
@@ -90,7 +192,8 @@ function openPicker(position, index) {
   currentPosition = index;
 
   document.getElementById("pitchScreen").classList.add("hidden");
-  document.getElementById("pickerScreen").classList.remove("hidden");
+  const picker = document.getElementById("pickerScreen");
+  picker.classList.remove("hidden");
 
   const eligible = players.filter(p =>
     p.positions.includes(position) &&
@@ -114,6 +217,7 @@ function openPicker(position, index) {
     });
 }
 
+// --- Pick Player ---
 function pickPlayer(player) {
   squad[currentPosition] = player;
   pickerOpen = false;
@@ -124,7 +228,7 @@ function pickPlayer(player) {
   renderPitch();
 }
 
-// Restart draft
+// --- Restart Draft ---
 document.getElementById("restartBtn").onclick = () => {
   if (pickerOpen) return;
   squad = {};
@@ -134,5 +238,5 @@ document.getElementById("restartBtn").onclick = () => {
   document.getElementById("pickerScreen").classList.add("hidden");
 };
 
-// Initial render
+// --- Initial Render ---
 renderFormationChoices();
