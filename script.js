@@ -268,7 +268,7 @@ function pickPlayer(player) {
 document.getElementById("restartBtn").onclick = () => {
   // Only allow restart if picker is NOT open
   if (pickerOpen) return;
-
+renderFormationChoices();
   document.getElementById("formationScreen").classList.remove("hidden");
   document.getElementById("pitchScreen").classList.add("hidden");
   document.getElementById("pickerScreen").classList.add("hidden");
