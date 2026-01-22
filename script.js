@@ -34,7 +34,7 @@ const formationPositionsData = {
     { pos: "LM", row: 2, col: 0 },
     { pos: "CM", row: 2, col: 1 },
     { pos: "CM", row: 2, col: 3 },
-    { pos: "RB", row: 2, col: 4 },
+    { pos: "RM", row: 2, col: 4 },
     { pos: "CB", row: 3, col: 1 },
     { pos: "CB", row: 3, col: 2 },
     { pos: "CB", row: 3, col: 3 },
