@@ -124,6 +124,26 @@ fetch("players.json")
   .then(res => res.json())
   .then(data => players = data);
 
+function getRandomFormations(amount = 3) {
+  return allFormations
+    .sort(() => 0.5 - Math.random())
+    .slice(0, amount);
+}
+
+function renderFormationChoices() {
+  const container = document.getElementById("formationOptions");
+  container.innerHTML = "";
+
+  const randomFormations = getRandomFormations(3);
+
+  randomFormations.forEach(formation => {
+    const btn = document.createElement("button");
+    btn.textContent = formation;
+    btn.onclick = () => startDraft(formation);
+    container.appendChild(btn);
+  });
+}
+
 function startDraft(formation) {
   document.getElementById("formationScreen").classList.add("hidden");
   document.getElementById("pitchScreen").classList.remove("hidden");
@@ -247,3 +267,5 @@ document.getElementById("restartBtn").onclick = () => {
   document.getElementById("pickerScreen").classList.add("hidden");
   squad = {};
 };
+
+renderFormationChoices();
