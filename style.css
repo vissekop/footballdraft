@@ -160,6 +160,11 @@ button {
   font-size: 16px;
 }
 
+.card span {
+  font-size: 14px;
+  text-align: center;
+}
+
 #options {
   display: flex;           /* row layout */
   justify-content: center; /* center the cards horizontally */
