@@ -102,14 +102,11 @@ button {
 .formation-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 👈 force 3 columns */
-  gap: 30px;
+  gap: 20px;
   justify-items: center;
   align-items: start;
 }
 
-.formation-option img {
-  max-width: 120px;
-}
 
 .formation-option {
   display: flex;
