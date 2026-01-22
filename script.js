@@ -27,6 +27,20 @@ const formationPositionsData = {
     { pos: "GK", row: 3, col: 2 } // dynamically centered
   ],
 
+    "3-4-2-1": [
+    { pos: "ST", row: 0, col: 2 },
+    { pos: "CAM", row: 1, col: 1 },
+    { pos: "CAM", row: 1, col: 3 },
+    { pos: "LM", row: 2, col: 0 },
+    { pos: "CM", row: 2, col: 1 },
+    { pos: "CM", row: 2, col: 3 },
+    { pos: "RB", row: 2, col: 4 },
+    { pos: "CB", row: 3, col: 1 },
+    { pos: "CB", row: 3, col: 2 },
+    { pos: "CB", row: 3, col: 3 },
+    { pos: "GK", row: 4, col: 2 } // dynamically centered
+  ],
+  
   "5-3-2": [
     { pos: "ST", row: 0, col: 1 },
     { pos: "ST", row: 0, col: 3 },
