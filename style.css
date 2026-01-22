@@ -1,3 +1,4 @@
+/* ------------------- GENERAL ------------------- */
 body {
   font-family: Arial, sans-serif;
   color: white;
@@ -31,7 +32,7 @@ button {
   display: none !important;
 }
 
-/* ----- Formation Grid ----- */
+/* ------------------- FORMATION SELECTION ------------------- */
 .formation-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -62,19 +63,42 @@ button {
   box-shadow: 0 0 20px rgba(255,255,255,0.35);
 }
 
-/* ----- Pitch ----- */
-#pitch {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 600px;
-  margin: auto;
+/* Responsive for small screens */
+@media (max-width: 500px) {
+  .formation-grid {
+    grid-template-columns: 1fr;
+  }
+  .formation-option img {
+    width: 120px;
+  }
 }
 
+/* ------------------- PITCH SCREEN ------------------- */
+#pitchScreen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Pitch grid */
+#pitch {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+  gap: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Player positions */
 .position {
-  width: 80px;
-  height: 80px;
-  background: #f82a4f;
+  width: 100px;
+  height: 100px;
+  background: rgba(248,42,79,0.85);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -84,28 +108,33 @@ button {
   text-align: center;
   overflow: hidden;
   padding: 5px;
+  font-size: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
+/* Hover effect for selectable positions */
 .position.selectable:hover {
   background: #f54464;
-  transform: scale(1.08);
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  transform: scale(1.12);
+  box-shadow: 0 0 15px rgba(255,255,255,0.4);
 }
 
 .position img.player-photo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .position span {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-/* ----- Player Picker ----- */
+/* ------------------- PLAYER PICKER ------------------- */
 #pickerScreen {
   position: fixed;
   top: 0;
@@ -132,6 +161,7 @@ button {
   flex-wrap: wrap;
 }
 
+/* Player cards */
 .card {
   background: #faf920;
   color: black;
@@ -142,13 +172,6 @@ button {
   align-items: center;
   width: 150px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: scale(1.1); /* slightly larger + subtle tilt */
-  box-shadow: 0 0 25px gold, 0 0 50px rgba(255, 255, 0, 0.4); /* glowing effect */
-  z-index: 10; /* make it appear above others */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -170,7 +193,14 @@ button {
   text-align: center;
 }
 
-/* ----- Restart Button ----- */
+/* Hover effect on cards */
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold, 0 0 50px rgba(255,255,0,0.4);
+  z-index: 10;
+}
+
+/* ------------------- RESTART BUTTON ------------------- */
 #restartBtn {
   font-size: 24px;
   width: 50px;
