@@ -146,7 +146,7 @@ button {
 }
 
 .card:hover {
-  transform: scale(1.1) rotateZ(-2deg); /* slightly larger + subtle tilt */
+  transform: scale(1.1); /* slightly larger + subtle tilt */
   box-shadow: 0 0 25px gold, 0 0 50px rgba(255, 255, 0, 0.4); /* glowing effect */
   z-index: 10; /* make it appear above others */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
