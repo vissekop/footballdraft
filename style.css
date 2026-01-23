@@ -1,8 +1,105 @@
+/* ------------------- GENERAL ------------------- */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background-image: url('images/backgrounds/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ------------------- FORMATION SELECTION ------------------- */
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  justify-content: center;
+}
+
+.formation-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formation-option img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.formation-option:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255,255,255,0.35);
+}
+
+@media (max-width: 500px) {
+  .formation-grid {
+    grid-template-columns: 1fr;
+  }
+  .formation-option img {
+    width: 120px;
+  }
+}
+
+/* ------------------- PITCH SCREEN ------------------- */
+#pitchScreen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 95vh;
+  padding-top: 20px; /* moved header higher */
+}
+
+/* Pitch grid */
+#pitch {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 140px; /* taller rows for bigger circles */
+  gap: 30px; /* more space between positions */
+  max-width: 900px; /* wider pitch for big circles */
+  width: 95%;
+  margin: 10px auto;
+}
+
+/* Player positions */
 .position {
   width: 100%;
   height: 100%;
-  max-width: 160px;   /* slightly bigger circles */
-  max-height: 160px;
+  max-width: 150px; /* bigger circles */
+  max-height: 150px;
   background: rgba(248,42,79,0.85);
   border-radius: 50%;
   display: flex;
@@ -15,32 +112,116 @@
   font-size: 16px;
   border: 2px solid rgba(255,255,255,0.3);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  padding: 10px;          /* inner space for text */
-  word-wrap: break-word;   /* allow names to wrap */
-  word-break: break-word;
-  line-height: 1.2em;      /* tighter line spacing */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-/* Player photo inside circle */
+/* Hover effect for selectable positions */
+.position.selectable:hover {
+  background: #f54464;
+  transform: scale(1.12);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
 .position img.player-photo {
-  width: 50px;    /* bigger photo */
-  height: 50px;
+  width: 60px; /* bigger photo */
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 5px;
 }
 
-/* Player name text inside circle */
 .position span {
-  font-size: 14px;         /* base size */
+  font-size: 14px;
   font-weight: bold;
-  white-space: normal;     /* allow wrapping */
-  word-break: break-word;  
-  max-width: 90%;          /* prevent overflow past circle edge */
-  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 90%; /* avoid cutting long names */
+}
+
+/* ------------------- PLAYER PICKER ------------------- */
+#pickerScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+#pickerScreen h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Player cards */
+.card {
+  background: #faf920;
+  color: black;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card b {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.card span {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Hover effect on cards */
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px gold, 0 0 50px rgba(255,255,0,0.4);
+  z-index: 10;
+}
+
+/* ------------------- RESTART BUTTON ------------------- */
+#restartBtn {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#restartBtn:hover {
+  background-color: rgba(255,255,255,0.3);
 }
