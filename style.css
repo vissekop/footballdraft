@@ -66,25 +66,29 @@ body::before {
 
 /* ---------- HEX POSITION CARD ---------- */
 .position {
-  width: 80px;   /* base width */
-  height: 120px; /* taller than width */
+  width: 80px;       /* width of the hex */
+  height: 110px;     /* taller than wide */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 5px;
+  justify-content: center;
 
-  /* Hex shape with rounded corners */
+  /* Upright hexagon with pointy top */
   clip-path: polygon(
-    25% 0%, 75% 0%, 
-    100% 50%, 75% 100%, 
-    25% 100%, 0% 50%
+    50% 0%,    /* top point */
+    100% 25%,  /* top-right corner */
+    100% 75%,  /* bottom-right corner */
+    50% 100%,  /* bottom point */
+    0% 75%,    /* bottom-left corner */
+    0% 25%     /* top-left corner */
   );
 
   background: rgba(248,42,79,0.85);
   border: 2px solid rgba(255,255,255,0.3);
   box-shadow: 0 0 12px rgba(0,0,0,0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  font-size: 14px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .position.selectable:hover {
