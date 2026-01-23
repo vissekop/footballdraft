@@ -1,4 +1,4 @@
-/* ----- Global ----- */
+/* ---------- GLOBAL ---------- */
 body {
   font-family: Arial, sans-serif;
   color: white;
@@ -9,36 +9,25 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
-  padding: 0;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.5);
   z-index: -1;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .hidden {
   display: none !important;
 }
 
-/* ----- Formation Selection ----- */
+/* ---------- FORMATION SELECTION ---------- */
 .formation-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 20px;
+  gap: 24px;
   justify-content: center;
   margin-top: 40px;
 }
@@ -52,198 +41,157 @@ button {
   border-radius: 12px;
   background: rgba(0,0,0,0.5);
   border: 2px solid rgba(255,255,255,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .formation-option img {
   width: 220px;
-  height: auto;
   margin-bottom: 8px;
 }
 
-.formation-option:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(255,255,255,0.35);
-}
-
-/* ----- Pitch ----- */
-#pitchScreen h2 {
+/* ---------- PITCH ---------- */
+.pitch-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 32px;
-  margin-top: 20px; /* move text higher */
-  margin-bottom: 20px;
 }
 
 #pitch {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  max-width: 800px; /* bigger pitch */
-  margin: 0 auto 50px auto;
+  gap: 45px 30px;           /* vertical / horizontal spacing */
+  max-width: 900px;
+  margin: 0 auto 60px;
 }
 
-/* ----- Positions (circles) ----- */
+/* ---------- SHIELD POSITION ---------- */
 .position {
-  width: 80px;          /* bigger circle */
-  height: 80px;
-  background: rgba(248,42,79,0.85);
-  border-radius: 50%;
+  width: 90px;
+  height: 110px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-  padding: 8px;
+  justify-content: center;
+
+  /* Shield shape */
+  clip-path: polygon(
+    50% 0%,
+    100% 20%,
+    85% 100%,
+    15% 100%,
+    0% 20%
+  );
+
+  background: rgba(248,42,79,0.85);
   border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  font-size: 14px;
-  word-wrap: break-word;
-  word-break: break-word;
-  line-height: 1.2em;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .position.selectable:hover {
-  background: #f54464;
   transform: scale(1.08);
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  box-shadow: 0 0 16px rgba(0,0,0,0.5);
 }
 
-/* Player photo in circle */
+/* Player image */
 .position img.player-photo {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  margin-bottom: 3px;
+  object-fit: cover;
+  margin-bottom: 4px;
 }
 
-/* Player name in circle */
+/* Player name */
 .position span {
   font-size: 12px;
   font-weight: bold;
-  white-space: normal;
-  word-break: break-word;
-  max-width: 90%;
-  overflow-wrap: break-word;
+  text-align: center;
+
+  white-space: nowrap;       /* 🔑 NO line breaking */
+  overflow: hidden;
+  text-overflow: ellipsis;   /* Lewandowski → Lewandowski */
+  max-width: 80px;
 }
 
-/* ----- Player Picker ----- */
+/* ---------- PLAYER PICKER ---------- */
 #pickerScreen {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.75);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   z-index: 100;
-}
-
-#pickerScreen h2 {
-  margin-bottom: 20px;
-  font-size: 32px;
 }
 
 #options {
   display: flex;
-  justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
 }
 
-/* ----- Player Cards ----- */
+/* Player cards */
 .card {
   background: #faf920;
   color: black;
   padding: 15px;
   border-radius: 12px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px gold, 0 0 50px rgba(255, 255, 0, 0.4);
-  z-index: 10;
+  box-shadow: 0 0 25px gold;
+  transform: scale(1.08);
 }
 
 .card img {
   width: 80px;
   height: 80px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
 .card b {
-  margin-bottom: 5px;
   font-size: 16px;
 }
 
 .card span {
   font-size: 14px;
-  text-align: center;
 }
 
-/* ----- Restart Button ----- */
+/* ---------- RESTART BUTTON ---------- */
 #restartBtn {
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
 }
 
-#restartBtn:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-/* ----- Responsive ----- */
-@media (max-width: 500px) {
-  .formation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .formation-option img {
-    width: 150px;
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+  #pitch {
+    gap: 30px 20px;
   }
 
   .position {
-    width: 100px;
+    width: 80px;
     height: 100px;
-    font-size: 12px;
   }
 
-  .position img.player-photo {
-    width: 35px;
-    height: 35px;
-  }
-
-  .card {
-    width: 120px;
-  }
-
-  .card img {
-    width: 60px;
-    height: 60px;
+  .position span {
+    max-width: 70px;
   }
 }
