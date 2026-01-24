@@ -76,11 +76,11 @@ body::before {
   /* Upright hexagon with pointy top */
   clip-path: polygon(
     50% 6%,    /* top point */
-    88% 20%,  /* top-right corner */
-    88% 80%,  /* bottom-right corner */
+    92% 20%,  /* top-right corner */
+    92% 80%,  /* bottom-right corner */
     50% 94%,  /* bottom point */
-    12% 80%,    /* bottom-left corner */
-    12% 20%     /* top-left corner */
+    8% 80%,    /* bottom-left corner */
+    8% 20%     /* top-left corner */
   );
 
   background: rgba(248,42,79,0.85);
