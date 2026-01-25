@@ -66,8 +66,8 @@ body::before {
 
 /* ---------- HEX POSITION CARD ---------- */
 .position {
-  width: 80px;       /* width of the hex */
-  height: 110px;     /* taller than wide */
+  width: 110px;       /* width of the hex */
+  height: 130px;     /* taller than wide */
   display: flex;
   flex-direction: column;
   align-items: center;
