@@ -217,3 +217,11 @@ body::before {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(255,255,255,0.35);
 }
+
+#fullscreenBtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  cursor: pointer;
+}
