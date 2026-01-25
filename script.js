@@ -160,9 +160,11 @@ function renderPitch() {
     div.className = "position";
 
     if (squad[index]) {
-      div.innerHTML = `
-        <img src="images/players/${squad[index].photo}" class="player-photo">
-        <span>${squad[index].name}</span>
+     div.innerHTML = `
+  <img src="images/players/${squad[index].photo}" class="player-photo">
+  ${formatPlayerName(squad[index].name)}
+`;
+
       `;
     } else {
       div.innerText = p.pos;
@@ -243,3 +245,30 @@ document.getElementById("restartBtn").onclick = () => {
 
 // --- Initial Render ---
 renderFormationChoices();
+
+function formatPlayerName(name) {
+  const parts = name.split(" ");
+
+  const MAX_CHARS_ONE_LINE = 15;
+
+  // 1) Single-word names → NEVER split
+  if (parts.length === 1) {
+    return `<span class="name one-line">${name}</span>`;
+  }
+
+  // 2) Multi-part but fits → keep one line
+  if (name.length <= MAX_CHARS_ONE_LINE) {
+    return `<span class="name one-line">${name}</span>`;
+  }
+
+  // 3) Too long & multi-part → split after first part
+  const firstLine = parts[0];
+  const secondLine = parts.slice(1).join(" ");
+
+  return `
+    <span class="name two-line">
+      <span>${firstLine}</span>
+      <span>${secondLine}</span>
+    </span>
+  `;
+}
