@@ -121,19 +121,20 @@ fetch("players.json")
 
 // --- Random Formations ---
 function getRandomFormations(amount = 3) {
-  return allFormations.sort(() => 0.5 - Math.random()).slice(0, amount);
+  return [...allFormations].sort(() => 0.5 - Math.random()).slice(0, amount);
 }
 
 // --- Render Formation Options ---
 function renderFormationChoices() {
   const container = document.getElementById("formationOptions");
   container.innerHTML = "";
+
   getRandomFormations(3).forEach(formation => {
     const div = document.createElement("div");
     div.className = "formation-option";
     div.onclick = () => startDraft(formation);
     div.innerHTML = `
-      <img src="images/formations/${formation.replace(/-/g,"")}.png" alt="${formation}">
+      <img src="images/formations/${formation.replace(/-/g, "")}.png" alt="${formation}">
       <span>${formation}</span>
     `;
     container.appendChild(div);
@@ -152,19 +153,18 @@ function startDraft(formation) {
 function renderPitch() {
   const pitch = document.getElementById("pitch");
   pitch.innerHTML = "";
+
   const maxRow = Math.max(...formationPositions.map(p => p.row));
-  pitch.style.gridTemplateRows = `repeat(${maxRow+1}, 80px)`;
+  pitch.style.gridTemplateRows = `repeat(${maxRow + 1}, 120px)`;
 
   formationPositions.forEach((p, index) => {
     const div = document.createElement("div");
     div.className = "position";
 
     if (squad[index]) {
-     div.innerHTML = `
-  <img src="images/players/${squad[index].photo}" class="player-photo">
-  ${formatPlayerName(squad[index].name)}
-`;
-
+      div.innerHTML = `
+        <img src="images/players/${squad[index].photo}" class="player-photo">
+        ${formatPlayerName(squad[index].name)}
       `;
     } else {
       div.innerText = p.pos;
@@ -173,13 +173,9 @@ function renderPitch() {
     div.style.gridRowStart = p.row + 1;
     div.style.gridColumnStart = p.col + 1;
 
-    // Enable selection only if picker is closed
     if (!squad[index] && !pickerOpen) {
       div.classList.add("selectable");
-      div.style.cursor = "pointer";
       div.onclick = () => openPicker(p.pos, index);
-    } else if (pickerOpen) {
-      div.style.cursor = "not-allowed";
     }
 
     pitch.appendChild(div);
@@ -196,30 +192,27 @@ function openPicker(position, index) {
   document.getElementById("pitchScreen").classList.add("hidden");
   const picker = document.getElementById("pickerScreen");
   picker.classList.remove("hidden");
-  
-  // Update picker title to show position
   picker.querySelector("h2").innerText = `Choose a player for ${position}`;
 
   const eligible = players.filter(p =>
     p.positions.includes(position) &&
-    !Object.values(squad).some(s => s && s.name === p.name)
+    !Object.values(squad).some(s => s?.name === p.name)
   );
 
   const options = document.getElementById("options");
   options.innerHTML = "";
 
-  eligible.sort(() => 0.5 - Math.random()).slice(0, 4)
-    .forEach(player => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <img src="images/players/${player.photo}" alt="${player.name}">
-        <b>${player.name}</b>
-        <span>${player.club}</span>
-      `;
-      card.onclick = () => pickPlayer(player);
-      options.appendChild(card);
-    });
+  eligible.sort(() => 0.5 - Math.random()).slice(0, 4).forEach(player => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="images/players/${player.photo}">
+      <b>${player.name}</b>
+      <span>${player.club}</span>
+    `;
+    card.onclick = () => pickPlayer(player);
+    options.appendChild(card);
+  });
 }
 
 // --- Pick Player ---
@@ -237,48 +230,32 @@ function pickPlayer(player) {
 document.getElementById("restartBtn").onclick = () => {
   if (pickerOpen) return;
   squad = {};
-  renderFormationChoices();
   document.getElementById("formationScreen").classList.remove("hidden");
   document.getElementById("pitchScreen").classList.add("hidden");
   document.getElementById("pickerScreen").classList.add("hidden");
+  renderFormationChoices();
 };
 
-// --- Initial Render ---
-renderFormationChoices();
-
+// --- Name Formatting ---
 function formatPlayerName(name) {
   const parts = name.split(" ");
   const MAX_CHARS_ONE_LINE = 16;
 
-  // 1) Single-part names → NEVER split
   if (parts.length === 1) {
     return `<span class="name one-line">${name}</span>`;
   }
 
-  // 2) Multi-part but fits visually → keep one line
   if (name.length <= MAX_CHARS_ONE_LINE) {
     return `<span class="name one-line">${name}</span>`;
   }
 
-  // 3) Hyphenated first part (Alexander-Arnold style)
-  if (parts[0].includes("-")) {
-    const [first, second] = parts[0].split("-");
-    return `
-      <span class="name two-line">
-        <span>${first}-${second}</span>
-        <span>${parts.slice(1).join(" ")}</span>
-      </span>
-    `;
-  }
-
-  // 4) Long multi-part → split after first word
-  const firstLine = parts[0];
-  const secondLine = parts.slice(1).join(" ");
-
   return `
     <span class="name two-line">
-      <span>${firstLine}</span>
-      <span>${secondLine}</span>
+      <span>${parts[0]}</span>
+      <span>${parts.slice(1).join(" ")}</span>
     </span>
   `;
 }
+
+// --- Initial Render ---
+renderFormationChoices();
