@@ -49,38 +49,44 @@ body::before {
   margin-bottom: 8px;
 }
 
+/* Formation hover effect */
+.formation-option:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255,255,255,0.35);
+}
+
 /* ---------- PITCH ---------- */
 #pitchScreen h2 {
   font-size: 32px;
-  margin-top: 20px; /* move text higher */
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 #pitch {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px 30px; /* vertical / horizontal spacing */
+  gap: 40px 30px;
   max-width: 900px;
   margin: 0 auto 60px;
 }
 
 /* ---------- HEX POSITION CARD ---------- */
 .position {
-  width: 110px;       /* width of the hex */
-  height: 130px;     /* taller than wide */
+  width: 110px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  /* Upright hexagon with pointy top */
+  /* Upright hexagon */
   clip-path: polygon(
-    50% 6%,    /* top point */
-    92% 20%,  /* top-right corner */
-    92% 80%,  /* bottom-right corner */
-    50% 94%,  /* bottom point */
-    8% 80%,    /* bottom-left corner */
-    8% 20%     /* top-left corner */
+    50% 6%, 
+    92% 20%, 
+    92% 80%, 
+    50% 94%, 
+    8% 80%, 
+    8% 20%
   );
 
   background: rgba(248,42,79,0.85);
@@ -111,7 +117,7 @@ body::before {
   font-weight: bold;
   text-align: center;
   max-width: 70px;
-  margin-bottom: 6px;       /* space for future logos */
+  margin-bottom: 6px;
 }
 
 /* ---------- PLAYER PICKER ---------- */
@@ -187,6 +193,22 @@ body::before {
   cursor: pointer;
 }
 
+/* ---------- FULLSCREEN BUTTON ---------- */
+#fullscreenBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
   #pitch {
@@ -210,41 +232,4 @@ body::before {
     width: 60px;
     height: 60px;
   }
-}
-
-/* Formation hover effect (restore it) */
-.formation-option:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px rgba(255,255,255,0.35);
-}
-
-#fullscreenBtn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 9999;
-  cursor: pointer;
-}
-
-.button-row {
-  margin-bottom: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-button#restartBtn,
-button#fullscreenBtn {
-  padding: 6px 12px;
-  font-size: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #1a73e8;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-button#restartBtn:hover,
-button#fullscreenBtn:hover {
-  background-color: #155ab6;
 }
