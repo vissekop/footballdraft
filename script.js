@@ -248,20 +248,30 @@ renderFormationChoices();
 
 function formatPlayerName(name) {
   const parts = name.split(" ");
+  const MAX_CHARS_ONE_LINE = 16;
 
-  const MAX_CHARS_ONE_LINE = 15;
-
-  // 1) Single-word names → NEVER split
+  // 1) Single-part names → NEVER split
   if (parts.length === 1) {
     return `<span class="name one-line">${name}</span>`;
   }
 
-  // 2) Multi-part but fits → keep one line
+  // 2) Multi-part but fits visually → keep one line
   if (name.length <= MAX_CHARS_ONE_LINE) {
     return `<span class="name one-line">${name}</span>`;
   }
 
-  // 3) Too long & multi-part → split after first part
+  // 3) Hyphenated first part (Alexander-Arnold style)
+  if (parts[0].includes("-")) {
+    const [first, second] = parts[0].split("-");
+    return `
+      <span class="name two-line">
+        <span>${first}-${second}</span>
+        <span>${parts.slice(1).join(" ")}</span>
+      </span>
+    `;
+  }
+
+  // 4) Long multi-part → split after first word
   const firstLine = parts[0];
   const secondLine = parts.slice(1).join(" ");
 
