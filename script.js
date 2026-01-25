@@ -259,3 +259,18 @@ function formatPlayerName(name) {
 
 // --- Initial Render ---
 renderFormationChoices();
+
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+fullscreenBtn.onclick = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+};
+
+// Optional: change icon depending on state
+document.addEventListener("fullscreenchange", () => {
+  fullscreenBtn.textContent = document.fullscreenElement ? "🡼" : "⛶";
+});
