@@ -62,7 +62,7 @@
   { "name": "Vitinha", "club": "PSG", "rating": 94, "positions": ["CM", "CAM", "CDM"], "photo": "vitinha.png" },
   { "name": "João Neves", "club": "PSG", "rating": 93, "positions": ["CM", "CAM"], "photo": "joao_neves.png" },
 
-  { "name": "Ter Stegen", "club": "Barcelona", "rating": 86, "positions": ["GK"], "photo": "ter_stegen.png" },
+  { "name": "Ter Stegen", "club": "Girona", "rating": 86, "positions": ["GK"], "photo": "ter_stegen.png" },
   { "name": "Ederson", "club": "Fenerbahçe", "rating": 86, "positions": ["GK"], "photo": "ederson.png" },
   { "name": "Alisson", "club": "Liverpool", "rating": 90, "positions": ["GK"], "photo": "alisson.png" },
 
