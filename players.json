@@ -116,7 +116,7 @@
 { "name": "Emiliano Martínez", "club": "Aston Villa", "rating": 88, "positions": ["GK"], "photo": "emiliano_martinez.png" },
 { "name": "Xhaka", "club": "Sunderland", "rating": 90, "positions": ["CM", "CDM"], "photo": "xhaka.png" },
 { "name": "De Gea", "club": "Fiorentina", "rating": 86, "positions": ["GK"], "photo": "de_gea.png" },
-{ "name": "Benzema", "club": "Al Ittihad", "rating": 87, "positions": ["ST"], "photo": "benzema.png" },
+{ "name": "Benzema", "club": "Al Hilal", "rating": 87, "positions": ["ST"], "photo": "benzema.png" },
 { "name": "Xavi Simons", "club": "Tottenham", "rating": 87, "positions": ["CAM", "LW"], "photo": "xavi_simons.png" },
 { "name": "Pavard", "club": "Marseille", "rating": 85, "positions": ["CB", "RB"], "photo": "pavard.png" },
 { "name": "Mamardashvili", "club": "Liverpool", "rating": 86, "positions": ["GK"], "photo": "mamardashvili.png" },
