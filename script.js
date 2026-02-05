@@ -161,12 +161,20 @@ function renderPitch() {
     const div = document.createElement("div");
     div.className = "position";
 
-    if (squad[index]) {
-      div.innerHTML = `
-        <img src="images/players/${squad[index].photo}" class="player-photo">
-        ${formatPlayerName(squad[index].name)}
-      `;
-    } else {
+if (squad[index]) {
+  div.innerHTML = `
+    <div class="player-card">
+      <img src="images/players/${squad[index].photo}" class="player-photo">
+      ${formatPlayerName(squad[index].name)}
+      <div class="player-icons">
+        <img src="${squad[index].clubLogo}" class="club-logo" alt="${squad[index].club}">
+        <img src="${squad[index].countryFlag}" class="country-flag" alt="${squad[index].name} Country">
+      </div>
+      <span class="rating">${squad[index].rating}</span>
+    </div>
+  `;
+}
+ else {
       div.innerText = p.pos;
     }
 
@@ -205,11 +213,18 @@ function openPicker(position, index) {
   eligible.sort(() => 0.5 - Math.random()).slice(0, 4).forEach(player => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `
-      <img src="images/players/${player.photo}">
-      <b>${player.name}</b>
-      <span>${player.club}</span>
-    `;
+card.innerHTML = `
+  <div class="picker-card">
+    <img src="images/players/${player.photo}" class="player-photo">
+    <b>${player.name}</b>
+    <div class="player-icons">
+      <img src="${player.clubLogo}" class="club-logo" alt="${player.club}">
+      <img src="${player.countryFlag}" class="country-flag" alt="${player.name} Country">
+    </div>
+    <span class="rating">${player.rating}</span>
+  </div>
+`;
+
     card.onclick = () => pickPlayer(player);
     options.appendChild(card);
   });
