@@ -50,7 +50,7 @@
   { "name": "Lammens", "club": "Man United", "rating": 87, "positions": ["GK"], "photo": "lammens.png", "clubLogo": "images/clubs/man_united.png", "countryFlag": "images/flags/belgium.png" },
   { "name": "Oblak", "club": "Atletico Madrid", "rating": 90, "positions": ["GK"], "photo": "oblak.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/slovenia.png" },
   { "name": "Julián Álvarez", "club": "Atletico Madrid", "rating": 91, "positions": ["ST"], "photo": "julian_alvarez.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/argentina.png" },
-  { "name": "Griezmann", "club": "Atletico Madrid", "rating": 89, "positions": ["ST", "LW"], "photo": "griezmann.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/france.png" }
+  { "name": "Griezmann", "club": "Atletico Madrid", "rating": 89, "positions": ["ST", "LW"], "photo": "griezmann.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/france.png" },
 
   { "name": "Pacho", "club": "PSG", "rating": 91, "positions": ["CB"], "photo": "pacho.png", "clubLogo": "images/clubs/psg.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Nuno Mendes", "club": "PSG", "rating": 92, "positions": ["LB", "LM"], "photo": "nuno_mendes.png", "clubLogo": "images/clubs/psg.png", "countryFlag": "images/flags/portugal.png" },
@@ -61,7 +61,7 @@
   { "name": "Ter Stegen", "club": "Girona", "rating": 86, "positions": ["GK"], "photo": "ter_stegen.png", "clubLogo": "images/clubs/girona.png", "countryFlag": "images/flags/germany.png" },
   { "name": "Ederson", "club": "Fenerbahçe", "rating": 86, "positions": ["GK"], "photo": "ederson.png", "clubLogo": "images/clubs/fenerbahce.png", "countryFlag": "images/flags/brazil.png" },
   { "name": "Alisson", "club": "Liverpool", "rating": 90, "positions": ["GK"], "photo": "alisson.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/brazil.png" },
-  { "name": "Lamine Yamal", "club": "Barcelona", "rating": 95, "positions": ["RW", "RM"], "photo": "lamine_yamal.png", "clubLogo": "images/clubs/barcelona.png", "countryFlag": "images/flags/spain.png" }
+  { "name": "Lamine Yamal", "club": "Barcelona", "rating": 95, "positions": ["RW", "RM"], "photo": "lamine_yamal.png", "clubLogo": "images/clubs/barcelona.png", "countryFlag": "images/flags/spain.png" },
 
   { "name": "Wirtz", "club": "Liverpool", "rating": 89, "positions": ["CAM", "CM"], "photo": "wirtz.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/germany.png" },
   { "name": "Isak", "club": "Liverpool", "rating": 88, "positions": ["ST"], "photo": "isak.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/sweden.png" },
@@ -88,7 +88,7 @@
   { "name": "Bruno Guimarães", "club": "Newcastle", "rating": 88, "positions": ["CM", "CDM"], "photo": "bruno_guimaraes.png", "clubLogo": "images/clubs/newcastle.png", "countryFlag": "images/flags/brazil.png" },
   { "name": "Tonali", "club": "Newcastle", "rating": 89, "positions": ["CM", "CDM"], "photo": "tonali.png", "clubLogo": "images/clubs/newcastle.png", "countryFlag": "images/flags/italy.png" },
   { "name": "Reijnders", "club": "Man City", "rating": 90, "positions": ["CM", "CAM", "CDM"], "photo": "reijnders.png", "clubLogo": "images/clubs/man_city.png", "countryFlag": "images/flags/netherlands.png" },
-  { "name": "Konaté", "club": "Liverpool", "rating": 88, "positions": ["CB"], "photo": "konate.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/mali.png" }
+  { "name": "Konaté", "club": "Liverpool", "rating": 88, "positions": ["CB"], "photo": "konate.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/mali.png" },
 
   { "name": "Kobel", "club": "Dortmund", "rating": 88, "positions": ["GK"], "photo": "kobel.png", "clubLogo": "images/clubs/dortmund.png", "countryFlag": "images/flags/switzerland.png" },
   { "name": "Dybala", "club": "Roma", "rating": 90, "positions": ["CAM", "ST", "RW"], "photo": "dybala.png", "clubLogo": "images/clubs/roma.png", "countryFlag": "images/flags/argentina.png" },
@@ -109,7 +109,7 @@
   { "name": "Kanté", "club": "Fenerbahçe", "rating": 87, "positions": ["CDM", "CM"], "photo": "kante.png", "clubLogo": "images/clubs/fenerbahce.png", "countryFlag": "images/flags/france.png" },
   { "name": "Carvajal", "club": "Real Madrid", "rating": 87, "positions": ["RB"], "photo": "carvajal.png", "clubLogo": "images/clubs/real_madrid.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Iñigo Martínez", "club": "Al Nassr", "rating": 88, "positions": ["CB"], "photo": "inigo_martinez.png", "clubLogo": "images/clubs/al_nassr.png", "countryFlag": "images/flags/spain.png" },
-  { "name": "Emiliano Martínez", "club": "Aston Villa", "rating": 88, "positions": ["GK"], "photo": "emiliano_martinez.png", "clubLogo": "images/clubs/aston_villa.png", "countryFlag": "images/flags/argentina.png" }
+  { "name": "Emiliano Martínez", "club": "Aston Villa", "rating": 88, "positions": ["GK"], "photo": "emiliano_martinez.png", "clubLogo": "images/clubs/aston_villa.png", "countryFlag": "images/flags/argentina.png" },
 
   { "name": "Xhaka", "club": "Sunderland", "rating": 90, "positions": ["CM", "CDM"], "photo": "xhaka.png", "clubLogo": "images/clubs/sunderland.png", "countryFlag": "images/flags/switzerland.png" },
   { "name": "De Gea", "club": "Fiorentina", "rating": 86, "positions": ["GK"], "photo": "de_gea.png", "clubLogo": "images/clubs/fiorentina.png", "countryFlag": "images/flags/spain.png" },
@@ -130,7 +130,7 @@
   { "name": "Lookman", "club": "Atletico Madrid", "rating": 90, "positions": ["LW", "ST", "CAM"], "photo": "lookman.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/england.png" },
   { "name": "Grimaldo", "club": "Leverkusen", "rating": 88, "positions": ["LB", "LM"], "photo": "grimaldo.png", "clubLogo": "images/clubs/leverkusen.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Lukaku", "club": "Napoli", "rating": 88, "positions": ["ST"], "photo": "lukaku.png", "clubLogo": "images/clubs/napoli.png", "countryFlag": "images/flags/belgium.png" },
-  { "name": "Openda", "club": "Juventus", "rating": 86, "positions": ["ST"], "photo": "openda.png", "clubLogo": "images/clubs/juventus.png", "countryFlag": "images/flags/belgium.png" }
+  { "name": "Openda", "club": "Juventus", "rating": 86, "positions": ["ST"], "photo": "openda.png", "clubLogo": "images/clubs/juventus.png", "countryFlag": "images/flags/belgium.png" },
 
   { "name": "Neuer", "club": "Bayern", "rating": 90, "positions": ["GK"], "photo": "neuer.png", "clubLogo": "images/clubs/bayern.png", "countryFlag": "images/flags/germany.png" },
   { "name": "Gavi", "club": "Barcelona", "rating": 86, "positions": ["CM", "CDM", "CAM"], "photo": "gavi.png", "clubLogo": "images/clubs/barcelona.png", "countryFlag": "images/flags/spain.png" },
