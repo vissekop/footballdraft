@@ -233,3 +233,22 @@ body::before {
     height: 60px;
   }
 }
+
+.player-icons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.club-logo, .country-flag {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.player-card, .picker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
