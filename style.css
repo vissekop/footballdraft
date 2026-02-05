@@ -267,15 +267,3 @@ body::before {
   display: none;
 }
 
-/* Optional: make picker cards slightly smaller for better layout */
-#pickerScreen .card,
-#pickerScreen .picker-card {
-  width: 130px;
-  padding: 10px;
-}
-
-#pickerScreen .card img,
-#pickerScreen .picker-card img.player-photo {
-  width: 70px;
-  height: 70px;
-}
