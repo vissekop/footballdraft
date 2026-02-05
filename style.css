@@ -1,110 +1,35 @@
+/* ---------- GLOBAL ---------- */
 body {
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-
-  /* Background settings */
-  background-image: url('images/backgrounds/background.jpg'); /* path to your image */
-  background-size: cover;           /* make it cover the entire screen */
-  background-position: center;      /* center the image */
-  background-repeat: no-repeat;     /* don’t repeat it */
-  background-attachment: fixed;     /* keeps it in place when scrolling */
+  background-image: url('images/backgrounds/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5); /* semi-transparent black overlay */
-  z-index: -1;                 /* stays behind all content */
-}
-
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 16px;
-  cursor: pointer;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-#pitch {
-  display: grid;
-  grid-template-rows: repeat(4, 80px);
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.position {
-  width: 80px;          /* bigger circle */
-  height: 80px;
-  background: #f82a4f;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column; /* allow photo and name vertically */
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;    /* center text inside */
-  overflow: hidden;      /* crop anything that overflows */
-  padding: 5px;          /* reduce padding so it doesn't add extra size */
-}
-
-
-
-.card {
-  background: #faf920;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  align-items: center;    /* center horizontally */
-  width: 120px;
-  cursor: pointer;
-}
-
-#pitchScreen {
-  position: relative; /* allows absolute positioning inside */
-}
-
-#restartBtn {
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.5); /* dark see-through */
-  color: white;
-  cursor: pointer;
-  position: absolute;  /* float at top-right */
-  top: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-#restartBtn:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* light overlay on hover */
-}
-
+/* ---------- FORMATION SELECTION ---------- */
 .formation-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 formations per row */
-  gap: 20px;
-  max-width: 400px; /* bigger so images fit nicely */
-  margin: 20px auto 0 auto;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .formation-option {
@@ -112,85 +37,199 @@ button {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .formation-option img {
-  width: 150px; /* adjust size if needed */
-  height: auto;
-  margin-bottom: 10px;
+  width: 220px;
+  margin-bottom: 8px;
 }
 
+/* Formation hover effect */
 .formation-option:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Responsive: 1 formation per row on small screens */
-@media (max-width: 500px) {
-  .formation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .formation-option img {
-    width: 120px;
-  }
-}
-
-.card img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%; /* circle photo */
-  margin-bottom: 5px; /* space between photo and name */
-}
-
-.card b {
-  margin-bottom: 3px; /* space between name and club */
-}
-
-#options {
-  display: flex;       /* arrange children in a row by default */
-  flex-wrap: wrap;     /* allow the cards to go to next row if they don’t fit */
-  justify-content: center; /* center the cards horizontally */
-  gap: 15px;           /* space between cards */
-}
-
-.position img.player-photo {
-  width: 40px;         /* small enough to fit inside the grid cell */
-  height: 40px;        /* square/circle */
-  object-fit: cover;   /* crop nicely if the image isn’t square */
-  border-radius: 50%;  /* circle photo */
-  margin-bottom: 3px;  /* space between photo and name */
-}
-
-.position span {
-  font-size: 12px;       /* slightly bigger for readability */
-  white-space: normal;   
-  word-break: break-word; 
-}
-
-/* Hover only for selectable positions */
-.position.selectable:hover {
-  background: #f54464;
   transform: scale(1.08);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255,255,255,0.35);
 }
 
-/* Smooth animation */
+/* ---------- PITCH ---------- */
+#pitchScreen h2 {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#pitch {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 30px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+/* ---------- HEX POSITION CARD ---------- */
 .position {
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
+  width: 110px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-.card {
+  /* Upright hexagon */
+  clip-path: polygon(
+    50% 6%, 
+    92% 20%, 
+    92% 80%, 
+    50% 94%, 
+    8% 80%, 
+    8% 20%
+  );
+
+  background: rgba(248,42,79,0.85);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 12px rgba(0,0,0,0.35);
+  font-size: 14px;
+  text-align: center;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.card:hover {
+.position.selectable:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 15px gold;
+  box-shadow: 0 0 16px rgba(0,0,0,0.5);
 }
 
+/* Player photo */
+.position img.player-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+/* Player name */
+.position span {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 70px;
+  margin-bottom: 6px;
+}
+
+/* ---------- PLAYER PICKER ---------- */
+#pickerScreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#pickerScreen h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+#options {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Player cards */
+.card {
+  background: #faf920;
+  color: black;
+  padding: 15px;
+  border-radius: 12px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px gold;
+  transform: scale(1.08);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card b {
+  font-size: 16px;
+}
+
+.card span {
+  font-size: 14px;
+}
+
+/* ---------- RESTART BUTTON ---------- */
+#restartBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- FULLSCREEN BUTTON ---------- */
+#fullscreenBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+  #pitch {
+    gap: 30px 20px;
+  }
+
+  .position {
+    width: 70px;
+    height: 105px;
+  }
+
+  .position span {
+    max-width: 60px;
+  }
+
+  .card {
+    width: 120px;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+}
