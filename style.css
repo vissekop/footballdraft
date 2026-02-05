@@ -254,12 +254,14 @@ body::before {
 }
 /* ---------- PLAYER PICKER ADJUSTMENTS ---------- */
 
-/* Make club logo and country flag smaller */
-#pickerScreen .club-logo,
-#pickerScreen .country-flag {
-  width: 10px;  /* smaller than current 24px */
-  height: 10px;
+/* Make club logo and country flag smaller on the player options cards */
+#pickerScreen #options .card .player-icons .club-logo,
+#pickerScreen #options .card .player-icons .country-flag {
+  width: 16px;   /* smaller size */
+  height: 16px;
+  object-fit: contain;
 }
+
 
 /* Hide the player rating on picker screen */
 #pickerScreen .card .rating,
