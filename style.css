@@ -257,8 +257,8 @@ body::before {
 /* Make club logo and country flag smaller */
 #pickerScreen .club-logo,
 #pickerScreen .country-flag {
-  width: 16px;  /* smaller than current 24px */
-  height: 16px;
+  width: 10px;  /* smaller than current 24px */
+  height: 10px;
 }
 
 /* Hide the player rating on picker screen */
