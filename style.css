@@ -252,3 +252,30 @@ body::before {
   flex-direction: column;
   align-items: center;
 }
+/* ---------- PLAYER PICKER ADJUSTMENTS ---------- */
+
+/* Make club logo and country flag smaller */
+#pickerScreen .club-logo,
+#pickerScreen .country-flag {
+  width: 16px;  /* smaller than current 24px */
+  height: 16px;
+}
+
+/* Hide the player rating on picker screen */
+#pickerScreen .card .rating,
+#pickerScreen .picker-card .rating {
+  display: none;
+}
+
+/* Optional: make picker cards slightly smaller for better layout */
+#pickerScreen .card,
+#pickerScreen .picker-card {
+  width: 130px;
+  padding: 10px;
+}
+
+#pickerScreen .card img,
+#pickerScreen .picker-card img.player-photo {
+  width: 70px;
+  height: 70px;
+}
