@@ -137,7 +137,7 @@
   { "name": "Balde", "club": "Barcelona", "rating": 87, "positions": ["LB"], "photo": "balde.png", "clubLogo": "images/clubs/barcelona.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Chevalier", "club": "PSG", "rating": 87, "positions": ["GK"], "photo": "chevalier.png", "clubLogo": "images/clubs/psg.png", "countryFlag": "images/flags/france.png" },
   { "name": "Sels", "club": "Nottingham Forest", "rating": 89, "positions": ["GK"], "photo": "sels.png", "clubLogo": "images/clubs/nottingham_forest.png", "countryFlag": "images/flags/belgium.png" },
-  { "name": "Vicario", "club": "Tottenham", "rating": 87, "positions": ["GK"], "photo": "vicario.png", "clubLogo": "images/clubs/tottenham.png", "countryFlag": "images/flags/spain.png" },
+  { "name": "Vicario", "club": "Tottenham", "rating": 87, "positions": ["GK"], "photo": "vicario.png", "clubLogo": "images/clubs/tottenham.png", "countryFlag": "images/flags/italy.png" },
   { "name": "Bounou", "club": "Al Hilal", "rating": 89, "positions": ["GK"], "photo": "bounou.png", "clubLogo": "images/clubs/al_hilal.png", "countryFlag": "images/flags/morocco.png" },
   { "name": "Casteels", "club": "Al Qadsiah", "rating": 86, "positions": ["GK"], "photo": "casteels.png", "clubLogo": "images/clubs/al_qadsiah.png", "countryFlag": "images/flags/belgium.png" },
   { "name": "Trafford", "club": "Man City", "rating": 87, "positions": ["GK"], "photo": "trafford.png", "clubLogo": "images/clubs/man_city.png", "countryFlag": "images/flags/england.png" }
