@@ -88,7 +88,7 @@
   { "name": "Bruno Guimarães", "club": "Newcastle", "rating": 88, "positions": ["CM", "CDM"], "photo": "bruno_guimaraes.png", "clubLogo": "images/clubs/newcastle.png", "countryFlag": "images/flags/brazil.png" },
   { "name": "Tonali", "club": "Newcastle", "rating": 89, "positions": ["CM", "CDM"], "photo": "tonali.png", "clubLogo": "images/clubs/newcastle.png", "countryFlag": "images/flags/italy.png" },
   { "name": "Reijnders", "club": "Man City", "rating": 90, "positions": ["CM", "CAM", "CDM"], "photo": "reijnders.png", "clubLogo": "images/clubs/man_city.png", "countryFlag": "images/flags/netherlands.png" },
-  { "name": "Konaté", "club": "Liverpool", "rating": 88, "positions": ["CB"], "photo": "konate.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/mali.png" },
+  { "name": "Konaté", "club": "Liverpool", "rating": 88, "positions": ["CB"], "photo": "konate.png", "clubLogo": "images/clubs/liverpool.png", "countryFlag": "images/flags/france.png" },
 
   { "name": "Kobel", "club": "Dortmund", "rating": 88, "positions": ["GK"], "photo": "kobel.png", "clubLogo": "images/clubs/dortmund.png", "countryFlag": "images/flags/switzerland.png" },
   { "name": "Dybala", "club": "Roma", "rating": 90, "positions": ["CAM", "ST", "RW"], "photo": "dybala.png", "clubLogo": "images/clubs/roma.png", "countryFlag": "images/flags/argentina.png" },
