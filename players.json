@@ -79,7 +79,7 @@
   { "name": "Ødegaard", "club": "Arsenal", "rating": 90, "positions": ["CAM", "CM"], "photo": "odegaard.png", "clubLogo": "images/clubs/arsenal.png", "countryFlag": "images/flags/norway.png" },
   { "name": "Raya", "club": "Arsenal", "rating": 93, "positions": ["GK"], "photo": "raya.png", "clubLogo": "images/clubs/arsenal.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Maignan", "club": "AC Milan", "rating": 88, "positions": ["GK"], "photo": "maignan.png", "clubLogo": "images/clubs/ac_milan.png", "countryFlag": "images/flags/france.png" },
-  { "name": "Guirassy", "club": "Dortmund", "rating": 89, "positions": ["ST"], "photo": "guirassy.png", "clubLogo": "images/clubs/dortmund.png", "countryFlag": "images/flags/france.png" },
+  { "name": "Guirassy", "club": "Dortmund", "rating": 89, "positions": ["ST"], "photo": "guirassy.png", "clubLogo": "images/clubs/dortmund.png", "countryFlag": "images/flags/guinea.png" },
   { "name": "Tah", "club": "Bayern", "rating": 90, "positions": ["CB"], "photo": "tah.png", "clubLogo": "images/clubs/bayern.png", "countryFlag": "images/flags/germany.png" },
   { "name": "Bruno Fernandes", "club": "Man United", "rating": 93, "positions": ["CAM", "CM"], "photo": "bruno_fernandes.png", "clubLogo": "images/clubs/man_united.png", "countryFlag": "images/flags/portugal.png" },
   { "name": "Sommer", "club": "Inter", "rating": 89, "positions": ["GK"], "photo": "sommer.png", "clubLogo": "images/clubs/inter.png", "countryFlag": "images/flags/switzerland.png" },
