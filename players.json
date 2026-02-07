@@ -127,7 +127,7 @@
   { "name": "Diogo Costa", "club": "Porto", "rating": 86, "positions": ["GK"], "photo": "diogo_costa.png", "clubLogo": "images/clubs/porto.png", "countryFlag": "images/flags/portugal.png" },
   { "name": "Davies", "club": "Bayern", "rating": 88, "positions": ["LB"], "photo": "davies.png", "clubLogo": "images/clubs/bayern.png", "countryFlag": "images/flags/canada.png" },
   { "name": "Dumfries", "club": "Inter", "rating": 88, "positions": ["RM", "RB"], "photo": "dumfries.png", "clubLogo": "images/clubs/inter.png", "countryFlag": "images/flags/netherlands.png" },
-  { "name": "Lookman", "club": "Atletico Madrid", "rating": 90, "positions": ["LW", "ST", "CAM"], "photo": "lookman.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/england.png" },
+  { "name": "Lookman", "club": "Atletico Madrid", "rating": 90, "positions": ["LW", "ST", "CAM"], "photo": "lookman.png", "clubLogo": "images/clubs/atletico_madrid.png", "countryFlag": "images/flags/nigeria.png" },
   { "name": "Grimaldo", "club": "Leverkusen", "rating": 88, "positions": ["LB", "LM"], "photo": "grimaldo.png", "clubLogo": "images/clubs/leverkusen.png", "countryFlag": "images/flags/spain.png" },
   { "name": "Lukaku", "club": "Napoli", "rating": 88, "positions": ["ST"], "photo": "lukaku.png", "clubLogo": "images/clubs/napoli.png", "countryFlag": "images/flags/belgium.png" },
   { "name": "Openda", "club": "Juventus", "rating": 86, "positions": ["ST"], "photo": "openda.png", "clubLogo": "images/clubs/juventus.png", "countryFlag": "images/flags/belgium.png" },
